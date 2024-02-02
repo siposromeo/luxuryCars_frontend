@@ -5,24 +5,28 @@
         <img src="../public/letter-c.png" class="justify-content-start" id="kep">
         <a class="navbar-brand p-2" id="focim">LuxuryCars Rental</a>
       </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <!-- ROUTERLINK -->
-          <a class="nav-link active" id="menupont" href="#">Kezdőlap</a>
-        </li>
-        <li class="nav-item">
-          <!-- ROUTERLINK -->
-          <a class="nav-link" id="menupont" href="#">Autóink</a>
-        </li>
-        <li class="nav-item">
-          <!-- ROUTERLINK -->
-          <a class="nav-link" id="menupont" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
+      <div class="navbar-center">
+        <ul class="nav">
+          <li class="nav-item">
+            <!-- ROUTERLINK -->
+            <a class="nav-link active" id="menupont" href="#">Kezdőlap</a>
+          </li>
+          <li class="nav-item">
+            <!-- ROUTERLINK -->
+            <a class="nav-link" id="menupont" href="#">Autóink</a>
+          </li>
+          <li class="nav-item">
+            <!-- ROUTERLINK -->
+            <a class="nav-link" id="menupont" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <li class="nav">
           <!-- ROUTERLINK -->
           <a class="nav-link" id="menupont" href="#">Felhasználó</a>
         </li>
-      </ul>
+      </div>
     </div>
   </div>
 
