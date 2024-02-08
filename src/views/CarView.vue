@@ -1,4 +1,5 @@
 <template>
+
 <div class="d-flex justify-content-center">
   <div class="card p-4" style="width: 85%;">
     <img src="" class="card-img-top">

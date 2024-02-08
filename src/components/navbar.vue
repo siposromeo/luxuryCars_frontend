@@ -1,7 +1,10 @@
 <template>
   <div class="navbar navbar-expand-lg ">
     <div class="container">
-      <div class="navbar-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse navbar-center" id="navbarSupportedContent">
         <ul class="nav">
           <li class="nav-item">
             <RouterLink class="nav-link active" to="/" id="menupont">Kezdőlap</RouterLink>
@@ -15,10 +18,10 @@
         </ul>
       </div>
       <div class="dropdown navbar-right">
-        <button class="btn dropdown-toggle" id="menupont" type="button" data-bs-toggle="dropdown">
-          Felhasználó
+        <button class="btn dropdown" id="menupont" type="button" data-bs-toggle="dropdown">
+          <ion-icon class="icon" name="person-circle-outline"></ion-icon>
         </button>
-        <ul class="dropdown-menu" id="menupont">
+        <ul class="dropdown-menu" :style="{ right: 0, left: 'auto'}" id="menupont">
           <li class="dropdown-item">
             <RouterLink class="nav-link active" id="menupont" to="/login">Bejelentkezés</RouterLink>
           </li>
@@ -37,10 +40,6 @@ import { RouterView, RouterLink } from 'vue-router'
 </script>
   
 <style scoped>
-#kep {
-  width: 40px;
-  height: 40px;
-}
 
 #focim {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -54,6 +53,10 @@ import { RouterView, RouterLink } from 'vue-router'
   color: orange;
   text-decoration: none;
   font-size: large;
+}
+.icon{
+  width: 35px;
+  height: 35px;
 }
 </style>
   
