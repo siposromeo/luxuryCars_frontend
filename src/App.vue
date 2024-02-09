@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <AppNav />
+  <AppNav/>
 </template>
 
 <script setup>
