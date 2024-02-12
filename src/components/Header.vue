@@ -1,7 +1,8 @@
 <template>
+            <hr class="hrBody">
     <div class="container-fluid p-0">
         <div class="header-bg d-flex justify-content-center align-items-center">
-            <span>LuxuryCars</span>
+            <span id="header">LuxuryCars</span>
         </div>
     </div>
 </template>
@@ -9,5 +10,19 @@
 </script>
 
 <style scoped>
-
+#header{
+    font-size: 2rem;
+    color: orange;
+    font-weight: bolder;
+    text-shadow: 1.1px 1.1px black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-style: italic;
+    margin: auto;
+}
+.hrBody{
+    border: 3px solid orange;
+    width: 100%;
+    margin: 5px;
+}
 </style>

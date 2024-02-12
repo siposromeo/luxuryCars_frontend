@@ -17,7 +17,7 @@
           </li>
         </ul>
       </div>
-      <div class="dropdown navbar-right">
+      <div class="dropdown navbar">
         <button class="btn dropdown" id="menupont" type="button" data-bs-toggle="dropdown">
           <ion-icon class="icon" name="person-circle-outline"></ion-icon>
         </button>
