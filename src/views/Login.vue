@@ -33,5 +33,6 @@
 <style scoped>
 .btn {
     color: orange;
+    font-family: fantasy;
 }
 </style>

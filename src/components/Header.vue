@@ -12,13 +12,15 @@
 <style scoped>
 #header{
     font-size: 2rem;
+    letter-spacing: 0.4rem;
+    font-style: italic;
     color: orange;
     font-weight: bolder;
     text-shadow: 1.1px 1.1px black;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: fantasy;
     text-align: center;
-    font-style: italic;
-    margin: auto;
+    margin-top: 0.2rem;
+    margin-bottom: -0.2rem;
 }
 .hrBody{
     border: 3px solid orange;

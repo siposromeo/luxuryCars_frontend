@@ -9,8 +9,7 @@
 <h4>Rómeó:</h4>
 <p>Nemzetközi sztár, vagyonőr, üzletember, etikus hacker, előadóművész, értelmiségi, gróf, koronaherceg, civil politikai elemző, testépítő, író, BRFK által megfigyelt, lehallgatott, követett személy, nemzetbiztonsági kockázati tényező, állandó stratégiai gócpont, a Karinthy gyűrű várományosa, istencsapás, donor és békaember</p>
 <h4>Benedek:</h4>
-<p>Fiatal senki a kölyköknek szár, akiért nem kár, aki megígérté, hogy a ház előtt megvár.</p>
-
+<p>Fiatal senki a kölyköknek sztár, akiért nem kár, aki megígérté, hogy a ház előtt megvár.</p>
 
 </template>
 
@@ -19,5 +18,18 @@
 </script>
 
 <style scoped>
-
+p{
+    font-size: 1rem;
+}
+h1{
+    font-size: 2.3rem;
+    font-weight: 400;
+    font-style: oblique;
+    text-align: center;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    color: orange;
+    font-family: fantasy;
+    letter-spacing: 2rem;
+}
 </style>

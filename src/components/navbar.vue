@@ -1,8 +1,6 @@
 <template>
   <div class="navbar navbar-expand-lg">
-
     <div class="container">
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,7 +13,7 @@
             <RouterLink class="nav-link active" id="menupont" to="/car">Autóink</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link active" id="menupont" to="/contact">Elérhetőségek</RouterLink>
+            <RouterLink class="nav-link active" id="menupont" to="/contact">A csapatról</RouterLink>
           </li>
         </ul>
       </div>
@@ -45,15 +43,8 @@ import { RouterView, RouterLink } from 'vue-router'
   
 <style scoped>
 
-#focim {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bolder;
-  text-shadow: 1.1px 1.1px black;
-  font-size: 1.5rem;
-}
-
 #menupont {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: fantasy;
   color: orange;
   text-decoration: none;
   font-size: large;

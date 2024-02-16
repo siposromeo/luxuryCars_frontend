@@ -1,12 +1,12 @@
 <template>
 <div class="d-flex justify-content-center" v-for="car in cars">
-  <div class="card"  style="width: 85%;">
-    <img src="" class="card-img-top">
+  <div class="card m-2" style="width: 70%;">
     <div class="card-body">
-      <h5 class="card-title">{{ car.marka_modelnev }}</h5>
+      <img width="300" height="200" class="float-end mt-3" :src="car.kep_Url" alt="">
+      <h5 class="card-title ">{{ car.marka_modelnev }}</h5>
       <p class="card-text">Lóerő: {{ car.loero }}</p>
       <p class="card-text">Férőhely: {{ car.ferohely}}</p>
-      <img width="300" height="200" class="float-end mt-3" :src="car.kep_Url" alt="">
+    <button class="btn btn-outline-primary w-50 p-2 m-2">Foglald le most!</button>
     </div>
   </div>
 </div>
