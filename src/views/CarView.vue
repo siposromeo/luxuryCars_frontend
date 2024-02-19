@@ -1,14 +1,22 @@
 <template>
-<div class="d-flex justify-content-center" v-for="car in cars">
-  <div class="card m-2" style="width: 70%;">
-    <div class="card-body">
-      <img width="300" height="200" class="float-end mt-3" :src="car.kep_Url" alt="">
-      <h5 class="card-title ">{{ car.marka_modelnev }}</h5>
-      <p class="card-text">Lóerő: {{ car.loero }}</p>
-      <p class="card-text">Férőhely: {{ car.ferohely}}</p>
-    <button class="btn btn-outline-primary w-50 p-2 m-2">Foglald le most!</button>
+<div class="row row-cols-md-5 row-cols-sm-1 container-fluid" >
+  <div class="d-flex" v-for="car in cars">
+    <div class="card p-2 mt-2">
+      <img class="h-40 w-100" :src="car.kep_Url">
+      <div class="card-body">
+          <h3 class="card-title ">{{ car.marka_modelnev }}</h3>
+        <p class="card-text">Lóerő: {{ car.loero }}</p>
+        <p class="card-text">Férőhely: {{ car.ferohely}}</p>
+      </div>
+      <button class="btn btn-outline-primary">Foglald le most!</button>
     </div>
   </div>
+</div>
+<div class="row row-cols-3 d-flex">
+  <button class=" btn btn-warning" @click="lapozasLe"><</button>
+  <div></div>
+  <button class=" btn btn-warning float-end " @click="lapozasFel">></button>
+
 </div>
 </template>
 
@@ -17,11 +25,31 @@ import { ref } from 'vue';
 import CarService from '../services/carservice'
 
 const cars = ref();
+const page = ref(1);
+const max_page = ref();
+
+async function lapozasFel() {
+  if (page.value < max_page.value)  {
+    page.value +=1
+  }
+  let res = await CarService.lapozz(page.value)
+  console.log(res.data);
+   cars.value = res.data.data
+}
+async function lapozasLe() {
+  if (page.value > 1)  {
+    page.value -=1
+  }
+  let res = await CarService.lapozz(page.value)
+  console.log(res.data);
+   cars.value = res.data.data
+}
 
 CarService.getAllCars()
   .then(response => {
-    console.log(response);
-    cars.value = response;
+    cars.value = response.data;
+    max_page.value = response.last_page;
+    console.log(max_page.value);
   })
 
 </script>

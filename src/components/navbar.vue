@@ -1,11 +1,11 @@
 <template>
-  <div class="navbar navbar-expand-lg">
+  <div class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="" id="navbarSupportedContent">
-        <ul class="nav">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <RouterLink class="nav-link active" to="/" id="menupont">Kezdőlap</RouterLink>
           </li>
@@ -17,8 +17,8 @@
           </li>
         </ul>
       </div>
-      
-      <div class="dropdown navbar">
+    </div>
+    <div class="dropdown navbar-nav">
         <button class="btn dropdown" id="menupont" type="button" data-bs-toggle="dropdown">
           <ion-icon class="icon" name="person-circle-outline"></ion-icon>
         </button>
@@ -31,8 +31,6 @@
           </li>
         </ul>
       </div>
-    </div>
-
   </div>
   <RouterView />
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <Header/>
+  <Header></Header>
   <AppNav/>
 </template>
 
@@ -9,5 +9,5 @@ import AppNav from '../src/components/navbar.vue'
 import Header from '../src/components/Header.vue'
 </script>
 
-<style scoped>
+<style>
 </style>

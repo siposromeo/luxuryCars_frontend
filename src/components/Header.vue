@@ -1,7 +1,7 @@
 <template>
-            <hr class="hrBody">
-    <div class="container-fluid p-0">
-        <div class="header-bg d-flex justify-content-center align-items-center">
+    <hr id="hrBody" class="container-fluid">
+    <div class="container-fluid bg-body-tertiary">
+        <div class="header-bg d-flex justify-content-center">
             <span id="header">LuxuryCars</span>
         </div>
     </div>
@@ -10,7 +10,7 @@
 </script>
 
 <style scoped>
-#header{
+#header {
     font-size: 2rem;
     letter-spacing: 0.4rem;
     font-style: italic;
@@ -22,7 +22,8 @@
     margin-top: 0.2rem;
     margin-bottom: -0.2rem;
 }
-.hrBody{
+
+#hrBody {
     border: 3px solid orange;
     width: 100%;
     margin: 5px;
