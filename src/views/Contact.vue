@@ -1,8 +1,8 @@
 <template>
-<h1>Luxury Cars Hungary</h1>
+<h1 class="mt-5">Luxury Cars Hungary</h1>
 <p class="m-5"><b>A tervünk az, hogy egy egyszerű és letisztult weboldalt alkossunk, ami megálja a helyét az osztálytársaink és évfolyamtársai weboldalai mellett is. Szeretnénk, hogy a weboldal használatának élménye legyen könnyű és magától érthető. Szerény véleményünk szerintünk lenne jelentős igény különböző szuper kategóriás autók kibérlésére. Közlekedés szerves része napjainknak, miért is ne lehetne, hogy azokat az utakat valami igazán különleges járműben tegyük meg.</b>
 </p>
-<h3 class="ms-5">A rendelés folyamat:</h3>
+<h3 class="ms-5">A rendelés folyamata:</h3>
 <p class="ms-5"><i>Közel 30 autó áll rendelkezésre, amely csak arra vár, hogy kipróbálja őket.</i> Válassza ki a kiválasztott autót, jelölje ki az időtartamot mikor szeretné az autót használni. És mi felvesszük a kapcsolatot Önnel email formájában.
 </p>
 <h3 class="ms-5 mt-5">Készítőkről:</h3>
@@ -13,7 +13,7 @@
 
 <div class="row">
   <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card ms-5">
+    <div class="card m-2">
       <div class="card-body">
         <h5 class="card-title">Rómeó:</h5>
         <p class="card-text">Nemzetközi sztár, vagyonőr, üzletember, etikus hacker, előadóművész, értelmiségi, gróf, koronaherceg, civil politikai elemző, testépítő, író, BRFK által megfigyelt, lehallgatott, követett személy, nemzetbiztonsági kockázati tényező, állandó stratégiai gócpont, a Karinthy gyűrű várományosa, istencsapás, donor és békaember</p>
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="col-sm-6">
-    <div class="card me-5">
+    <div class="card m-2">
       <div class="card-body">
         <h5 class="card-title">Benedek:</h5>
         <p class="card-text">"Fiatal senki a kölyköknek sztár, akiért nem kár, aki megígérté, hogy a ház előtt megvár."</p>
@@ -53,4 +53,18 @@ h1{
     font-family: fantasy;
     letter-spacing: 2rem;
 }
+h3{
+  letter-spacing: 0.2rem;
+    font-style: italic;
+    color: orange;
+    font-family: fantasy;
+}
+
+h5{
+  letter-spacing: 0.2rem;
+    font-style: italic;
+    color: orange;
+    font-family: fantasy;
+}
+
 </style>
