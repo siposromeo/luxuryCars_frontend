@@ -3,13 +3,16 @@
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../img/challenger.jpg" class="d-block w-100" alt="...">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/Mercedes-AMG-GT-R-Roadster-6538_23.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../img/charger.jpg" class="d-block w-100" alt="...">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/BMW-M8-Coupe-6590_26.jpg" class="d-block h-80 w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="../img/ram.jpg" class="d-block w-100" alt="...">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="d-block h-80 w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/MASERATI-GranTurismo-6046_21.jpg" class="d-block h-80 w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -48,6 +51,48 @@
 
 
 
+<div class="card-group">
+  <div class="card">
+    <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1685458010/autoexpress/2023/05/Porsche%20911%20GTS%20UK%20001_otx6j7.jpg" class="w-100" alt="...">
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h1 class="text-center mt-5">Regisztrálj most:</h1>
+      <h3 class="text-center">Béreld ki akár most álomautodat:</h3>
+      <RouterLink class="btn btn-info ms-5"  to="/registration">Regisztráció</RouterLink>
+      </div>
+  </div>
+  </div>
+
+
+
+  <div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h1 class="text-center mt-5">Nagy választék:</h1>
+      <RouterLink class="btn btn-info m-5"  to="/car">Foglald le most</RouterLink>
+      </div>
+  </div>
+  <div class="card">
+    <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100" alt="...">
+  </div>
+  </div>
+
+
+  
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
 
 
 
@@ -60,6 +105,18 @@
 </template>
 
 <script setup>
+import { ref,onMounted } from 'vue';
+import CarService from '../services/carservice'
+
+const cars = ref();
+
+
+onMounted(()=>{CarService.getAllCars()
+  .then(response => {
+    cars.value = response;
+    console.log(response);
+  })})
+
 
 </script>
 
@@ -69,9 +126,8 @@
   height: 55px;
   margin-top: 42px;
   margin-bottom: 8px;
-  margin-left: 255px;
+  margin-left: 285px;
 
 }
-
 
 </style>
