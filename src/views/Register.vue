@@ -1,5 +1,5 @@
 <template>
-  <form class="position-absolute top-50 start-50 translate-middle" style="text-align: center; margin-top: 5rem;">
+  <form class="position-absolute top-50 start-50 translate-middle" style="text-align: center; margin-top: 2rem;">
 
     <div>
       <div>

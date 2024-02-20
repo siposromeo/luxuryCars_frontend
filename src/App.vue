@@ -1,5 +1,5 @@
 <template>
-  <Header></Header>
+  <!-- <Header></Header> -->
   <AppNav/>
 </template>
 

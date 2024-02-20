@@ -1,9 +1,9 @@
 <template>
     <hr id="hrBody" class="container-fluid">
     <div class="container-fluid bg-body-tertiary">
-        <div class="header-bg d-flex justify-content-center">
+        <!-- <div class="header-bg d-flex justify-content-center">
             <span id="header">LuxuryCars</span>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
