@@ -67,9 +67,9 @@
 .icon{
   width: 55px;
   height: 55px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  margin-left: 280px;
+  margin-top: 42px;
+  margin-bottom: 8px;
+  margin-left: 255px;
 
 }
 
