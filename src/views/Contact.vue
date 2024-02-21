@@ -7,11 +7,7 @@
 </p>
 <h3 class="ms-5 mt-5">Készítőkről:</h3>
 
-
-
-
-
-<div class="row">
+<div class="d-flex">
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card m-2">
       <div class="card-body">
@@ -31,7 +27,7 @@
     </div>
   </div>
 </div>
-<h3 class="m-5 text-center">Bármi kérdésed van nyugodtan fordulj hozzánk a problémáddal :D</h3>
+<h3 class="text-center">Bármi kérdésed van nyugodtan fordulj hozzánk a problémáddal :D</h3>
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-    <form class="position-absolute top-50 start-50 translate-middle" style="text-align: center; margin-top: 3rem;">
+    <form style="text-align: center; margin-top: 3rem;">
         <div>
             <div>
                 <label for="emailInput" class="form-label" style="color: orange;">Email cím</label>
@@ -16,7 +16,7 @@
         </div>
 
 
-        <div class="mb-3 d-flex justify-content-center row" style="font-weight: 400; font-size: 0.8rem;">
+        <div class="mb-3 d-flex justify-content-center" style="font-weight: 400; font-size: 0.8rem;">
             Nincs még nálunk felhasználód?
             <div style="margin-left: 0.4rem;">
                 <router-link to="/registration" style="color: orange; text-decoration: none;">Kattints ide</router-link>

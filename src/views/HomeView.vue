@@ -9,29 +9,27 @@
       <img src="https://s1.cdn.autoevolution.com/images/gallery/BMW-M8-Coupe-6590_26.jpg" class="d-block h-80 w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="d-block h-80 w-100" alt="...">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="d-block h-80 w-100">
     </div>
     <div class="carousel-item">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/MASERATI-GranTurismo-6046_21.jpg" class="d-block h-80 w-100" alt="...">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/MASERATI-GranTurismo-6046_21.jpg" class="d-block h-80 w-100">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <button class="carousel-control-prev position-inherit " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-
 <div class="card-group">
   <div class="card">
     <h1 class="text-center mt-5">30 db</h1>
     <div class="card-body">
-      <h5 class="card-title text-center">Auto áll készen, arra hogy kibereld őket</h5>
-     
+      <h5 class="card-title text-center">Auto áll készen, arra hogy kibereld őket
+      </h5>
     </div>
   </div>
   <div class="card">
