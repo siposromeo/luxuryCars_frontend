@@ -27,7 +27,6 @@
     </div>
   </div>
 </div>
-<h3 class="text-center">Bármi kérdésed van nyugodtan fordulj hozzánk a problémáddal :D</h3>
 </template>
 
 <script setup>

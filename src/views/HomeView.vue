@@ -1,7 +1,7 @@
 <template>
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+  <!-- <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://s1.cdn.autoevolution.com/images/gallery/Mercedes-AMG-GT-R-Roadster-6538_23.jpg" class="d-block w-100" alt="...">
     </div>
@@ -9,12 +9,12 @@
       <img src="https://s1.cdn.autoevolution.com/images/gallery/BMW-M8-Coupe-6590_26.jpg" class="d-block h-80 w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="d-block h-80 w-100">
+      <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="d-block h-50 w-50">
     </div>
     <div class="carousel-item">
       <img src="https://s1.cdn.autoevolution.com/images/gallery/MASERATI-GranTurismo-6046_21.jpg" class="d-block h-80 w-100">
     </div>
-  </div>
+  </div> -->
   <button class="carousel-control-prev position-inherit " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
     <span class="visually-hidden">Previous</span>
@@ -35,7 +35,7 @@
   <div class="card">
       <ion-icon class="icon" name="stopwatch-outline"></ion-icon>
     <div class="card-body">
-      <h5 class="card-title text-center">Azonnali fogalás</h5>
+      <h5 class="card-title text-center">Azonnali foglalás</h5>
     </div>
   </div>
   <div class="card">
@@ -55,9 +55,9 @@
   </div>
   <div class="card">
     <div class="card-body">
-      <h1 class="text-center mt-5">Regisztrálj most:</h1>
-      <h3 class="text-center">Béreld ki akár most álomautodat:</h3>
-      <RouterLink class="btn btn-info ms-5"  to="/registration">Regisztráció</RouterLink>
+      <h1 class="m-5 text-center" style="font-family: fantasy; letter-spacing: 0.2rem;">Béreld ki akár most álomautodat</h1>
+      <h1 class="text-center mt-5">Regisztrálj most</h1>
+      <RouterLink class="btn btn-warning p-3 m-5" style="font-family: fantasy; " to="/registration">Regisztráció</RouterLink>
       </div>
   </div>
   </div>
@@ -67,8 +67,8 @@
   <div class="card-group">
   <div class="card">
     <div class="card-body">
-      <h1 class="text-center mt-5">Nagy választék:</h1>
-      <RouterLink class="btn btn-info m-5"  to="/car">Foglald le most</RouterLink>
+      <h1 class="text-center mt-5" style="font-family: fantasy; letter-spacing: 0.4rem;">Nagy választék:</h1>
+      <RouterLink class="btn btn-warning p-3 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
       </div>
   </div>
   <div class="card">
@@ -120,12 +120,9 @@ onMounted(()=>{CarService.getAllCars()
 
 <style scoped>
 .icon{
-  width: 55px;
-  height: 55px;
-  margin-top: 42px;
-  margin-bottom: 8px;
-  margin-left: 285px;
-
+  width: auto;
+  height: 35%;
+  margin: 25px;
 }
 
 </style>

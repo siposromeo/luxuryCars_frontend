@@ -1,41 +1,9 @@
 <template>
     <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Tudj meg többet rólunk:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
 
   <!-- Section: Links  -->
-  <section class="">
+  <section class="d-flex justify-content-center justify-content-lg-between">
     <div class="container text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
@@ -73,7 +41,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Haznos linkek:
+            Hasznos linkek:
           </h6>
           <p>
             <a href="https://www.youtube.com/watch?v=llGkzOG0pvo" target="_blank" class="text-reset">Video</a>
@@ -110,7 +78,24 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(44, 33, 33, 0.05);">
-    Luxury Cars Hunagry©
+    LuxuryCars Hungary©
+    <div class="justify-content-center mt-2">
+      <a href="" class="me-3 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-3 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-3 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-3 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-1 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
   </div>
   <!-- Copyright -->
 </footer>
