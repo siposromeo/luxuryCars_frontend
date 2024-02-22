@@ -7,7 +7,7 @@
       <nav class="menu">
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <ul>
+        <ul class="justify-content-around">
           <li>
           <RouterLink class="a" to="/car">Autóink</RouterLink>
         </li>
@@ -65,7 +65,7 @@ header {
     margin: 0 0 0 5rem;
 }
 .menu {
-    width: 30%;
+    width: 38%;
     height: 100%;
     float: right;
 }
@@ -115,7 +115,6 @@ header {
         text-align: center;
         width: 100%;
         height: 50px;
-        padding: 10px 5px 10px 5%;
     }
     .menu-icon {
         width: 100px;
