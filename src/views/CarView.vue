@@ -1,10 +1,10 @@
 <template>
 <div class=" row-cols-md-5 row-cols-sm-1 container-fluid">
   <div class="w-100 m-1 row row-cols-2">
-    <div class="d-flex " v-for="car in cars">
+    <div class="d-flex" v-for="car in cars">
     <div class="card p-2 mt-2">
-      <img class="h-40 w-100" :src="car.kep_Url">
-      <div class="card-body ">
+      <div class="card-body p-3">
+        <img class="w-100 h-75" :src="car.kep_Url">
           <h3 class="card-title ">{{ car.marka_modelnev }}</h3>
         <p class="card-text">Lóerő: {{ car.loero }}</p>
         <p class="card-text">Férőhely: {{ car.ferohely}}</p>
@@ -13,13 +13,11 @@
     </div>
   </div>
 </div>
-  
 </div>
 <div class="d-flex row-cols-3 d-flex">
   <button class=" btn btn-warning" @click="lapozasLe"><</button>
   <div></div>
   <button class="btn btn-warning float-end " @click="lapozasFel">></button>
-
 </div>
 </template>
 
@@ -58,5 +56,4 @@ CarService.getAllCars()
 </script>
 
 <style scoped>
-
 </style>
