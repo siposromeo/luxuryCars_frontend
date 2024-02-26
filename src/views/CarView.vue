@@ -1,21 +1,21 @@
 <template>
-<div class=" row-cols-md-5 row-cols-sm-1 container-fluid">
-  <div class="w-100 m-1 row row-cols-2">
+<div class="row-cols-md-5 row-cols-sm-1 row-cols-lg-4 row-cols-xl-5 d-flex container-fluid">
+  <div class="w-100 m-1 row row-cols-2 d-flex">
     <div class="d-flex" v-for="car in cars">
-    <div class="card p-2 mt-2">
-      <div class="card-body p-3">
+    <div class="card mb-2 mt-2 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="card-body d-flex flex-column justify-content-center">
         <img class="w-100 h-75" :src="car.kep_Url">
-          <h3 class="card-title ">{{ car.marka_modelnev }}</h3>
+          <h3 class="card-title">{{ car.marka_modelnev }}</h3>
         <p class="card-text">Lóerő: {{ car.loero }}</p>
         <p class="card-text">Férőhely: {{ car.ferohely}}</p>
+        <button class="btn btn-outline-primary">Foglald le most!</button>
       </div>
-      <button class="btn btn-outline-primary">Foglald le most!</button>
     </div>
   </div>
 </div>
 </div>
 <div class="d-flex row-cols-3 d-flex">
-  <button class=" btn btn-warning" @click="lapozasLe"><</button>
+  <button class="btn btn-warning float-start " @click="lapozasLe"><</button>
   <div></div>
   <button class="btn btn-warning float-end " @click="lapozasFel">></button>
 </div>
@@ -56,4 +56,8 @@ CarService.getAllCars()
 </script>
 
 <style scoped>
+.card{
+  border: 2px solid black;
+  border-radius: 10px;
+}
 </style>

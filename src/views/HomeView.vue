@@ -1,6 +1,6 @@
 <template>
 
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://s1.cdn.autoevolution.com/images/gallery/Mercedes-AMG-GT-R-Roadster-6538_23.jpg" class="d-block">
@@ -23,9 +23,11 @@
     <span class="carousel-control-next-icon"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-<!-- <div class="card-group">
-  <div class="card">
+</div> -->
+
+
+<div class="row-cols-3 m-2 card-group d-flex mt-2">
+  <div class="card bg-warning text-white">
     <h1 class="text-center mt-5">30 db</h1>
     <div class="card-body">
       <h5 class="card-title text-center">Auto áll készen, arra hogy kibereld őket
@@ -44,14 +46,15 @@
       <h5 class="card-title text-center">Tapasztalat</h5>
     </div>
   </div>
-</div> -->
+</div>
 
 
 
 
-<!-- <div class="card-group">
+<div class="d-block m-2">
+  <div class="card-group">
   <div class="card">
-    <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1685458010/autoexpress/2023/05/Porsche%20911%20GTS%20UK%20001_otx6j7.jpg" class="w-100" alt="...">
+    <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1685458010/autoexpress/2023/05/Porsche%20911%20GTS%20UK%20001_otx6j7.jpg" class="w-100">
   </div>
   <div class="card">
     <div class="card-body">
@@ -62,8 +65,6 @@
   </div>
   </div>
 
-
-
   <div class="card-group">
   <div class="card">
     <div class="card-body">
@@ -72,13 +73,15 @@
       </div>
   </div>
   <div class="card">
-    <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100" alt="...">
+    <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100">
   </div>
   </div>
+</div>
+
 
 
   
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="..." class="d-block w-100" alt="...">
@@ -90,8 +93,8 @@
       <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>
-</div> -->
-
+</div>
+ -->
 
 
    
@@ -119,14 +122,8 @@ onMounted(()=>{CarService.getAllCars()
 
 <style scoped>
 .icon{
-  width: auto;
-  height: 35%;
-  margin: 25px;
-}
-@media only screen and (max-width: 480px) {
-img {
-width: 100%;
-}
+  width: 100%;
+  font-size: 100px;
 }
 
 </style>

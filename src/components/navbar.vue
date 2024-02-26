@@ -29,7 +29,6 @@
   
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
-
 </script>
   
 <style scoped>
@@ -58,11 +57,11 @@ header {
     width: auto;
     text-decoration: none;
     font-family: fantasy;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #222;
     height: 100%;
     float: left;
-    margin: 0 0 0 5rem;
+    margin: 0 0 0 2rem;
 }
 .menu {
     width: 38%;
@@ -95,6 +94,7 @@ header {
 }
 .menu-icon {
     display: none;
+    cursor: pointer;
 }
 @media screen and (max-width: 768px) {
     .menu {
@@ -115,6 +115,7 @@ header {
         text-align: center;
         width: 100%;
         height: 50px;
+        margin-bottom: 5px;
     }
     .menu-icon {
         width: 100px;
