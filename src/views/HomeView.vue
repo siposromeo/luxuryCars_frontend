@@ -1,129 +1,123 @@
 <template>
-
-<!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/Mercedes-AMG-GT-R-Roadster-6538_23.jpg" class="d-block">
-    </div>
-    <div class="carousel-item">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/BMW-M8-Coupe-6590_26.jpg" class="d-block">
-    </div>
-    <div class="carousel-item">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="d-block">
-    </div>
-    <div class="carousel-item">
-      <img src="https://s1.cdn.autoevolution.com/images/gallery/MASERATI-GranTurismo-6046_21.jpg" class="d-block">
-    </div>
+  <div class="row-cols-1">
+    <Carousel :value="cars" :numVisible="3" :numScroll="2" :responsiveOptions="responsiveOptions">
+      <template #item="cars">
+        <div class="surface-border border-black border-round m-4 p-2">
+          <div class="mx-auto ms-auto m-lg-auto">
+            <img :src="cars.data.kep_Url" style="max-width: 450px; max-height: 270px;"
+              class="w-full border-round  rounded" />
+          </div>
+        </div>
+      </template>
+    </Carousel>
   </div>
-  <button class="carousel-control-prev position-inherit " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div> -->
 
 
-<div class="row-cols-3 m-2 card-group d-flex mt-2">
-  <div class="card bg-warning text-white">
-    <h1 class="text-center mt-5">30 db</h1>
-    <div class="card-body">
-      <h5 class="card-title text-center">Auto áll készen, arra hogy kibereld őket
-      </h5>
+  <div class="row-cols-3 m-2 card-group d-flex mt-2 rounded">
+    <div class="card bg-warning text-white">
+      <h1 class="text-center mt-5">30 db</h1>
+      <div class="card-body">
+        <h5 class="card-title text-center">Auto áll készen, arra hogy kibereld őket</h5>
+      </div>
     </div>
-  </div>
-  <div class="card">
+    <div class="card text-warning">
       <ion-icon class="icon" name="stopwatch-outline"></ion-icon>
-    <div class="card-body">
-      <h5 class="card-title text-center">Azonnali foglalás</h5>
-    </div>
-  </div>
-  <div class="card">
-    <h1 class="text-center mt-5">2 év</h1>
-    <div class="card-body">
-      <h5 class="card-title text-center">Tapasztalat</h5>
-    </div>
-  </div>
-</div>
-
-
-
-
-<div class="d-block m-2">
-  <div class="card-group">
-  <div class="card">
-    <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1685458010/autoexpress/2023/05/Porsche%20911%20GTS%20UK%20001_otx6j7.jpg" class="w-100">
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h1 class="m-5 text-center" style="font-family: fantasy; letter-spacing: 0.2rem;">Béreld ki akár most álomautodat</h1>
-      <h1 class="text-center mt-5">Regisztrálj most</h1>
-      <RouterLink class="btn btn-warning p-3 m-5" style="font-family: fantasy; " to="/registration">Regisztráció</RouterLink>
+      <div class="card-body">
+        <h5 class="card-title text-center">Azonnali foglalás</h5>
       </div>
-  </div>
-  </div>
-
-  <div class="card-group">
-  <div class="card">
-    <div class="card-body">
-      <h1 class="text-center mt-5" style="font-family: fantasy; letter-spacing: 0.4rem;">Nagy választék:</h1>
-      <RouterLink class="btn btn-warning p-3 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
+    </div>
+    <div class="card bg-warning text-white">
+      <h1 class="text-center mt-5">2 év</h1>
+      <div class="card-body">
+        <h5 class="card-title text-center">Tapasztalat</h5>
       </div>
-  </div>
-  <div class="card">
-    <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100">
-  </div>
-  </div>
-</div>
-
-
-
-  
-  <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
     </div>
   </div>
-</div>
- -->
-
-
-   
-
-
-
-  
-
+  <div class="d-block m-2">
+    <div class="card-group">
+      <div class="card">
+        <img
+          src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1685458010/autoexpress/2023/05/Porsche%20911%20GTS%20UK%20001_otx6j7.jpg"
+          class="w-100 h-100 rounded">
+      </div>
+      <div class="card">
+        <div class="card-body text-center">
+          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.3rem;">Béreld ki akár most
+            álomautodat</h1>
+          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/registration">Regisztráció
+          </RouterLink>
+        </div>
+      </div>
+    </div>
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body text-center">
+          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.3rem;">Nagy választék</h1>
+          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100 h-100 rounded">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { ref,onMounted } from 'vue';
+import { ref } from 'vue';
+import Carousel from 'primevue/carousel';
 import CarService from '../services/carservice'
 
 const cars = ref();
 
-onMounted(()=>{CarService.getAllCars()
-  .then(response => {
-    cars.value = response;
-    console.log(response);
-  })})
+CarService.getAllCars()
+  .then(res => {
+    cars.value = res.data
+    console.log(res.data)
+  })
 
+// onMounted(() => {
+//     CarService.getAllCars()
+//     .then((data) => (cars.value));
+//     console.log(data);
+// })
 
+const responsiveOptions = ref([
+  {
+    breakpoint: '1400px',
+    numVisible: 2,
+    numScroll: 1
+  },
+  {
+    breakpoint: '1199px',
+    numVisible: 3,
+    numScroll: 1
+  },
+  {
+    breakpoint: '767px',
+    numVisible: 2,
+    numScroll: 1
+  },
+  {
+    breakpoint: '575px',
+    numVisible: 1,
+    numScroll: 1
+  }
+]);
 </script>
 
 <style scoped>
-.icon{
+.icon {
   width: 100%;
-  font-size: 100px;
+  height: 100%;
+  font-size: 90px;
 }
 
+.card {
+  border: none;
+}
+
+.p-carousel-indicator{
+ text-decoration: none !important;
+}
 </style>

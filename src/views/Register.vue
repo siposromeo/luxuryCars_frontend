@@ -28,7 +28,7 @@
 
     <div class="d-flex justify-content-center" style="padding-top: 0.1rem; margin-top: 0.1rem;">
       <div style="color: orange;" class="col-md-3 m-3">
-        <label for="licenceNumber" class="form-label">Jogosítvány szám</label>
+        <label for="licenceNumber" class="form-label" style="letter-spacing: -1.1px;">Jogosítvány szám</label>
         <input type="licenceNumberType" id="licenceNumber" class="form-control">
       </div>
 
