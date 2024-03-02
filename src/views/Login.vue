@@ -3,15 +3,17 @@
         <div>
             <div>
                 <label for="emailInput" class="form-label" style="color: orange;">Email cím</label>
-                <input type="email" class="form-control" id="emailInput">
+                <input type="email" class="form-control" id="emailInput" v-model="form.email">
             </div>
             <div>
                 <label for="inputPassword" class="form-label"
                     style="font-weight: bolder; color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;">Jelszó</label>
-                <input type="password" id="inputPassword" class="form-control">
+                <input type="password" id="inputPassword" class="form-control" v-model="form.password">
             </div>
             <div class="mb-3 d-flex justify-content-center">
-                <button type="submit" class="btn btn-outline-secondary" style="margin-top: 1rem;">Bejelentkezés</button>
+                <!-- <button type="submit" class="btn btn-outline-secondary" style="margin-top: 1rem;" @submit="Login">Bejelentkezés</button> -->
+                <input type="button" class="btn btn-outline-secondary" style="margin-top: 1rem;" value="Belépés"  @click="Login" >
+                <input type="button" class="btn btn-outline-secondary" style="margin-top: 1rem;" value="Tesz"  @click="sisi" >
             </div>
         </div>
 
@@ -27,6 +29,29 @@
 </template>
 
 <script setup>
+import {ref} from 'vue';
+import axios from 'axios';
+import { useRoute,useRouter } from 'vue-router';
+
+
+const form=ref({
+  name:'',
+  password:''
+})
+
+async function Login(){
+  await axios.post('http://127.0.0.1:8000/api/login',form.value)
+  console.log("ok");
+  alert("Sikeres belépés csita!");
+}
+
+function sisi(){
+    // Login();
+    router.push({ path: '/' })
+}
+
+
+
 
 </script>
 
