@@ -1,7 +1,7 @@
 <template>
-  <form class="mb-5 mt-5" style="text-align: center;" @submit.prevent="SubmitEvent">
-    <div>
-      <div class="mx-auto">
+  <form class="mb-5 mt-5 " style="text-align: center;">
+    <div class="mx-auto ms-auto m-lg-auto mb-5">
+      <div>
         <div>
         <div >
           <label for="nameInput" class="form-label" style="font-weight: bolder; color: orange;">Teljes név</label>
@@ -23,7 +23,6 @@
         </p>
       </div>
       </div>
-
     </div>
 
     <div class="d-flex justify-content-center" style="padding-top: 0.1rem; margin-top: 0.1rem;">
