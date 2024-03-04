@@ -13,7 +13,7 @@
             <div class="mb-3 d-flex justify-content-center">
                 <!-- <button type="submit" class="btn btn-outline-secondary" style="margin-top: 1rem;" @submit="Login">Bejelentkezés</button> -->
                 <input type="button" class="btn btn-outline-secondary" style="margin-top: 1rem;" value="Belépés"  @click="Login" >
-                <input type="button" class="btn btn-outline-secondary" style="margin-top: 1rem;" value="Tesz"  @click="sisi" >
+
             </div>
         </div>
 
@@ -31,7 +31,9 @@
 <script setup>
 import {ref} from 'vue';
 import axios from 'axios';
-import { useRoute,useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
+ 
+let router = useRouter();
 
 
 const form=ref({
@@ -40,15 +42,14 @@ const form=ref({
 })
 
 async function Login(){
-  await axios.post('http://127.0.0.1:8000/api/login',form.value)
-  console.log("ok");
-  alert("Sikeres belépés csita!");
+    
+    await axios.post('http://127.0.0.1:8000/api/login',form.value)
+    console.log("ok");
+    await alert("Sikeres belépés csita!");
+    router.push("/car")
 }
 
-function sisi(){
-    // Login();
-    router.push({ path: '/' })
-}
+
 
 
 

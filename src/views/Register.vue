@@ -44,7 +44,8 @@
 
     <div class="mb-3 d-flex justify-content-center" style="margin-top: 0.5rem;">
       <!-- <button type="submit" class="btn btn-outline-secondary" @click="Register">Regisztráció</button> -->
-      <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"  @click="Register" >
+      <input type="button" @click="Register" class="btn btn-outline-secondary" value="Regisztráció"   >
+      <!-- <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"  @click="Register" > -->
     </div>
     <span v-for="error in v$.$errors" :key="error.$uid">
       {{ error.$property }} - {{ error.$message }}
@@ -95,7 +96,8 @@ const v$=useVuelidate(rules,form);
 async function Register(){
   await axios.post('http://127.0.0.1:8000/api/register',form.value)
   console.log("ok");
-  alert("Sikeres regisztráció csita!");
+  await alert("Sikeres regisztráció csita!");
+  router.push("/car")
 }
 
 
