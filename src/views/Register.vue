@@ -1,5 +1,5 @@
 <template>
-  <form class="mb-5 mt-5 " style="text-align: center;">
+  <form class="mb-5 mt-5 " style="text-align: center;" @submit.prevent="SubmitEvent">
     <div class="mx-auto ms-auto m-lg-auto mb-5">
       <div>
         <div>
@@ -44,12 +44,17 @@
 
     <div class="mb-3 d-flex justify-content-center" style="margin-top: 0.5rem;">
       <!-- <button type="submit" class="btn btn-outline-secondary" @click="Register">Regisztráció</button> -->
-      <input type="button" @click="Register" class="btn btn-outline-secondary" value="Regisztráció"   >
+      <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"   >
       <!-- <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"  @click="Register" > -->
     </div>
-    <span v-for="error in v$.$errors" :key="error.$uid">
-      {{ error.$property }} - {{ error.$message }}
-    </span>
+    <div v-for="error in v$.$errors" class="" :key="error.$uid">
+      <ul>
+        <li>
+          <b>{{ error.$message }}</b>
+        </li>
+      </ul>
+    </div>
+  
     <div class="mb-3 d-flex justify-content-center" style="font-weight: 400; font-size: 0.8rem;">
       Van már felhasználód?
       <div style="margin-left: 0.4rem;">
@@ -64,8 +69,10 @@
 import {ref,computed} from 'vue';
 import axios from 'axios';
 import useVuelidate from '@vuelidate/core';
-import { required,email,minLength } from '@vuelidate/validators';
-
+import { required,email,minLength,helpers } from '@vuelidate/validators';
+import { useRouter } from 'vue-router';
+ 
+let router = useRouter();
 
 
 
@@ -81,32 +88,30 @@ const form=ref({
 
 const rules= computed(()=>{
 return{
-  name:{required},
-  email:{required,email},
-  password:{required,minLength:minLength(8)},
-  jogositvany_szam:{required},
-  telefonszam:{required},
-  szamlazasi_cim:{required},
-}
-})
+  name:{required:helpers.withMessage("Kötelező a név mezőt kitölteni",required)},
+  email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email},
+  password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:minLength(8)},
+  jogositvany_szam:{required:helpers.withMessage("Kötelező a jogosítvány szám mezőt kitölteni",required)},
+  telefonszam:{required:helpers.withMessage("Kötelező a telefonszám mezőt kitölteni",required)},
+  szamlazasi_cim:{required:helpers.withMessage("Kötelező a számlázási cím mezőt kitölteni",required)},
+};
+});
 
 const v$=useVuelidate(rules,form);
 
 
-async function Register(){
-  await axios.post('http://127.0.0.1:8000/api/register',form.value)
-  console.log("ok");
-  await alert("Sikeres regisztráció csita!");
-  router.push("/car")
-}
+
 
 
 const SubmitEvent=async()=>{
   const result=await v$.value.$validate();
   if (result) {
-    alert("jóó")
+    await axios.post('http://127.0.0.1:8000/api/register',form.value)
+  console.log("ok");
+  await alert("Sikeres regisztráció csita!");
+  router.push("/")
   }else{
-    alert("nem jo")
+    alert("Sikertelen regisztráció")
   }
  
 }
@@ -140,4 +145,6 @@ const SubmitEvent=async()=>{
   color: orange;
   font-family: fantasy;
 }
+
+
 </style>

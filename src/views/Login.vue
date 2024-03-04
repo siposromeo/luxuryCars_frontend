@@ -1,5 +1,5 @@
 <template>
-    <form style="text-align: center; margin-top: 3rem;">
+    <form style="text-align: center; margin-top: 3rem;" @submit.prevent="SubmitEvent">
         <div>
             <div>
                 <label for="emailInput" class="form-label" style="color: orange;">Email cím</label>
@@ -12,7 +12,7 @@
             </div>
             <div class="mb-3 d-flex justify-content-center">
                 <!-- <button type="submit" class="btn btn-outline-secondary" style="margin-top: 1rem;" @submit="Login">Bejelentkezés</button> -->
-                <input type="button" class="btn btn-outline-secondary" style="margin-top: 1rem;" value="Belépés"  @click="Login" >
+                <input type="submit" class="btn btn-outline-secondary" value="Belépés"   >
 
             </div>
         </div>
@@ -29,8 +29,10 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import {ref,computed} from 'vue';
 import axios from 'axios';
+import useVuelidate from '@vuelidate/core';
+import { required,email,minLength,helpers } from '@vuelidate/validators';
 import { useRouter } from 'vue-router';
  
 let router = useRouter();
@@ -41,6 +43,39 @@ const form=ref({
   password:''
 })
 
+const rules= computed(()=>{
+return{
+  email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email},
+  password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:minLength(8)},
+};
+});
+
+const v$=useVuelidate(rules,form);
+
+
+
+
+
+const SubmitEvent=async()=>{
+  const result=await v$.value.$validate();
+  if (result) {
+    let req=await axios.post('http://127.0.0.1:8000/api/login',form.value)
+    console.log(req)
+    if (req.user) {
+        await alert("sikertelen belépés csita!");
+        console.log(req);
+        return
+    }
+    console.log("ok");
+    await alert("Sikeres belépés csita!");
+    router.push("/car")
+  }else{
+    alert("Sikertelen regisztráció")
+  }
+ 
+}
+
+
 async function Login(){
     
     await axios.post('http://127.0.0.1:8000/api/login',form.value)
@@ -48,6 +83,9 @@ async function Login(){
     await alert("Sikeres belépés csita!");
     router.push("/car")
 }
+
+
+
 
 
 
