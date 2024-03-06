@@ -12,7 +12,7 @@
             </div>
             <div class="mb-3 d-flex justify-content-center">
                 <!-- <button type="submit" class="btn btn-outline-secondary" style="margin-top: 1rem;" @submit="Login">Bejelentkezés</button> -->
-                <input type="submit" class="btn btn-outline-secondary" value="Belépés"   >
+                <input type="submit" class="btn btn-outline-secondary mt-4" value="Belépés"   >
 
             </div>
         </div>
@@ -32,7 +32,7 @@
 import {ref,computed} from 'vue';
 import axios from 'axios';
 import useVuelidate from '@vuelidate/core';
-import { required,email,minLength,helpers } from '@vuelidate/validators';
+import { required,email,minLength,helpers, alpha } from '@vuelidate/validators';
 import { useRouter } from 'vue-router';
  
 let router = useRouter();
@@ -59,19 +59,24 @@ const v$=useVuelidate(rules,form);
 const SubmitEvent=async()=>{
   const result=await v$.value.$validate();
   if (result) {
-    let req=await axios.post('http://127.0.0.1:8000/api/login',form.value)
-    console.log(req)
-    if (req.user) {
-        await alert("sikertelen belépés csita!");
-        console.log(req);
-        return
+    let req = null
+    try {
+        req=await axios.post('http://127.0.0.1:8000/api/login',form.value)
+    } catch (error) {
+        console.log(error)
+        await alert("sikertelen belépés")
     }
-    console.log("ok");
-    await alert("Sikeres belépés csita!");
-    router.push("/car")
-  }else{
+        if  (req){
+            await alert("Sikeres belépés csita!");
+            console.log("ok");
+            router.push("/car")
+            console.log(req);
+            return
+        }
+    }
+    else{
     alert("Sikertelen regisztráció")
-  }
+    }
  
 }
 

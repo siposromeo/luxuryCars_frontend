@@ -47,7 +47,10 @@
       <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"   >
       <!-- <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"  @click="Register" > -->
     </div>
-    <div v-for="error in v$.$errors" class="" :key="error.$uid">
+
+  
+
+    <div v-for="error in v$.$errors" class="hiba" :key="error.$uid">
       <ul>
         <li>
           <b>{{ error.$message }}</b>
@@ -146,5 +149,11 @@ const SubmitEvent=async()=>{
   font-family: fantasy;
 }
 
-
+.hiba{
+  font: red;
+  background-color: grey;
+  width: 25%;
+  margin: auto;
+  
+}
 </style>
