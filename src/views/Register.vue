@@ -5,18 +5,18 @@
         <div>
         <div >
           <label for="nameInput" class="form-label" style="font-weight: bolder; color: orange;">Teljes név</label>
-          <input type="name" class="form-control" id="nameInput" v-model="form.name">
+          <input type="name" class="form-control w-50 m-auto" id="nameInput" v-model="form.name">
         </div>
         <div>
           <label for="emailInput" class="form-label"
             style="color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;">Email
             cím</label>
-          <input type="email" class="form-control" id="emailInput" v-model="form.email">
+          <input type="email" class="form-control w-50 m-auto" id="emailInput" v-model="form.email">
         </div>
         <div>
           <label for="inputPassword" class="form-label"
             style="font-weight: bolder; color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;">Jelszó</label>
-          <input type="password" id="inputPassword" class="form-control" v-model="form.password">
+          <input type="password" id="inputPassword" class="form-control w-50 m-auto" v-model="form.password">
         </div>
         <p style="font-size: 0.6rem;">
           FONTOS! A jelszavad legyen legalább 8 karakter.
@@ -42,23 +42,24 @@
       </div>
     </div>
 
-    <div class="mb-3 d-flex justify-content-center" style="margin-top: 0.5rem;">
+    <div class="mb-4 d-flex justify-content-center" style="margin-top: 0.5rem;">
       <!-- <button type="submit" class="btn btn-outline-secondary" @click="Register">Regisztráció</button> -->
       <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"   >
       <!-- <input type="submit" class="btn btn-outline-secondary" value="Regisztráció"  @click="Register" > -->
     </div>
 
-  
+<div class="hiba" >
 
-    <div v-for="error in v$.$errors" class="hiba" :key="error.$uid">
-      <ul>
+    <div v-for="error in v$.$errors"  :key="error.$uid">
+      <p class="m-0 p-1">{{ error.$message }}</p>
+      <!-- <ul>
         <li>
           <b>{{ error.$message }}</b>
         </li>
-      </ul>
+      </ul> -->
     </div>
-  
-    <div class="mb-3 d-flex justify-content-center" style="font-weight: 400; font-size: 0.8rem;">
+  </div>  
+    <div class="mt-5 mb-3 d-flex justify-content-center" style="font-weight: 400; font-size: 0.8rem;">
       Van már felhasználód?
       <div style="margin-left: 0.4rem;">
         <router-link to="/login" style="color: orange; text-decoration: none;">Kattints ide</router-link>
@@ -79,7 +80,6 @@ let router = useRouter();
 
 
 
-
 const form=ref({
   name:'',
   email:'',
@@ -89,11 +89,13 @@ const form=ref({
   szamlazasi_cim:'',
 })
 
+// minLength(8)
+
 const rules= computed(()=>{
 return{
   name:{required:helpers.withMessage("Kötelező a név mezőt kitölteni",required)},
-  email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email},
-  password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:minLength(8)},
+  email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email:helpers.withMessage("Valódi emailt adjon meg!",email)},
+  password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:helpers.withMessage("A jelszónak legalább 8 karakternek kell lennie!",minLength(8))},
   jogositvany_szam:{required:helpers.withMessage("Kötelező a jogosítvány szám mezőt kitölteni",required)},
   telefonszam:{required:helpers.withMessage("Kötelező a telefonszám mezőt kitölteni",required)},
   szamlazasi_cim:{required:helpers.withMessage("Kötelező a számlázási cím mezőt kitölteni",required)},
@@ -116,7 +118,10 @@ const SubmitEvent=async()=>{
   }else{
     alert("Sikertelen regisztráció")
   }
- 
+
+
+
+
 }
 
 // const Register=async()=>{
@@ -150,10 +155,12 @@ const SubmitEvent=async()=>{
 }
 
 .hiba{
-  font: red;
-  background-color: grey;
+  font-family: fantasy;
+  color:brown;
   width: 25%;
   margin: auto;
+  padding: 10px;
+  border-radius: 10px;
   
 }
 </style>
