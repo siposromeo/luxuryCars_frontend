@@ -37,6 +37,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
+    text-shadow: 1.2px 1px 10px #000;
 }
 a {
   color: #222;
@@ -48,7 +50,7 @@ li {
 header {
     width: 100%;
     height: 54px;
-    line-height: 48px;
+    line-height: 54px;
     text-align: center;
     font-family: fantasy;
     background-color: #f1c40f;
@@ -62,11 +64,13 @@ header {
     height: 100%;
     float: left;
     margin: 0 0 0 2rem;
+    letter-spacing: 0.5cap;
 }
 .menu {
-    width: 38%;
+    width: 40%;
     height: 100%;
     float: right;
+    letter-spacing: 0.2cap;
 }
 .menu ul {
     width: 100%;
@@ -88,6 +92,7 @@ header {
 .menu ul a:hover {
     background-color: #222;
     color: #f1c40f;
+    line-height: 48px;
 }
 #menuToggle {
     display: none;

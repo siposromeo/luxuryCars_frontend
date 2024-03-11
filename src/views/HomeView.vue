@@ -1,19 +1,14 @@
 <template>
-  <div class="row-cols-1">
-    <Carousel :value="cars" :numVisible="3" :numScroll="2" :responsiveOptions="responsiveOptions">
+    <Carousel :value="cars" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000" :showIndicators="0" :showNavigators="0">
       <template #item="cars">
-        <div class="surface-border border-black border-round m-4 p-2">
+        <div class="p-2 m-2 d-lg-flex d-grid align-items-center">
           <div class="mx-auto ms-auto m-lg-auto">
-            <img :src="cars.data.kep_Url" style="max-width: 450px; max-height: 270px;"
-              class="w-full border-round  rounded" />
+            <img :src="cars.data.kep_Url" style="max-width: 500px; max-height: 250px;" class="rounded"/>
           </div>
         </div>
       </template>
     </Carousel>
-  </div>
-
-
-  <div class="row-cols-3 m-2 card-group d-flex mt-2 rounded">
+  <div class="row-cols-3 m-3 card-group d-flex mt-2 rounded">
     <div class="card bg-warning text-white">
       <h1 class="text-center mt-5">30 db</h1>
       <div class="card-body">
@@ -57,7 +52,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100 h-100 rounded">
+        <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-auto h-auto rounded h-100">
       </div>
     </div>
   </div>
@@ -76,12 +71,6 @@ CarService.getAllCars()
     console.log(res.data)
   })
 
-// onMounted(() => {
-//     CarService.getAllCars()
-//     .then((data) => (cars.value));
-//     console.log(data);
-// })
-
 const responsiveOptions = ref([
   {
     breakpoint: '1400px',
@@ -95,11 +84,11 @@ const responsiveOptions = ref([
   },
   {
     breakpoint: '767px',
-    numVisible: 2,
+    numVisible: 1,
     numScroll: 1
   },
   {
-    breakpoint: '575px',
+    breakpoint: '350px',
     numVisible: 1,
     numScroll: 1
   }
