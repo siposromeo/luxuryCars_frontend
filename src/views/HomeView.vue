@@ -1,5 +1,5 @@
 <template>
-    <Carousel :value="cars" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000" :showIndicators="0" :showNavigators="0">
+    <Carousel :value="cars" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000" :showIndicators="false" :showNavigators="false">
       <template #item="cars">
         <div class="p-2 m-2 d-lg-flex d-grid align-items-center">
           <div class="mx-auto ms-auto m-lg-auto">
@@ -68,7 +68,7 @@ const cars = ref();
 CarService.getAllCars()
   .then(res => {
     cars.value = res.data
-    console.log(res.data)
+    // console.log(res.data)
   })
 
 const responsiveOptions = ref([

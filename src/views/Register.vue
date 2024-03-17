@@ -91,7 +91,7 @@ const form=ref({
 
 // minLength(8)
 
-const rules= computed(()=>{
+const rules = computed(()=>{
 return{
   name:{required:helpers.withMessage("Kötelező a név mezőt kitölteni",required)},
   email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email:helpers.withMessage("Valódi emailt adjon meg!",email)},
@@ -118,10 +118,6 @@ const SubmitEvent=async()=>{
   }else{
     alert("Sikertelen regisztráció")
   }
-
-
-
-
 }
 
 // const Register=async()=>{

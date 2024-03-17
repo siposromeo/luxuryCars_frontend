@@ -1,5 +1,5 @@
 <template>
-  <h1 class="mt-5">Luxury Cars Hungary</h1>
+  <!-- <h1 class="mt-5">Luxury Cars Hungary</h1> -->
   <p class="m-5"><b>A tervünk az, hogy egy egyszerű és letisztult weboldalt alkossunk, ami megálja a helyét az
       osztálytársaink és évfolyamtársai weboldalai mellett is. Szeretnénk, hogy a weboldal használatának élménye legyen
       könnyű és magától érthető. Szerény véleményünk szerintünk lenne jelentős igény különböző szuper kategóriás autók
@@ -16,7 +16,7 @@
     <div class="card m-3">
       <div class="card-body">
         <h5 class="card-title">Sipos Rómeó</h5>
-        <p class="card-text">A LuxuryCars Hungary megalkotója. <br>Full-stack developer és csapat-vezető.</p>
+        <p class="card-text">A LuxuryCars Hungary megalkotója.<br>Full-stack developer és csapat-vezető.</p>
         <div class="d-grid m-2">
           <a href="https://github.com/siposromeo" target="_blank" class="btn btn-secondary">Github</a>
         </div>
@@ -32,7 +32,7 @@
     <div class="card m-3">
       <div class="card-body">
         <h5 class="card-title">Ősze Benedek</h5>
-        <p class="card-text">Mobil-alkalmazás fejlesztő és tesztelő, <br>marketing szakértő, stílus manager.</p>
+        <p class="card-text">Mobil-alkalmazás fejlesztő és tesztelő, <br>marketing szakértő, stílus-manager.</p>
         <div class="d-grid m-2">
           <a href="https://github.com/NMTHFTR" target="_blank" class="btn btn-secondary">Github</a>
         </div>
@@ -58,7 +58,6 @@
   font-size: 1rem;
   font-weight: 700;
 }
-
 h1 {
   font-size: 2.3rem;
   font-weight: 400;
