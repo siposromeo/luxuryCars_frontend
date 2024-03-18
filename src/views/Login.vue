@@ -45,12 +45,12 @@ const form=ref({
 const rules= computed(()=>{
 return{
     email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email:helpers.withMessage("Valódi emailt adjon meg!",email)},
-  password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:helpers.withMessage("A jelszónak legalább 8 karakternek kell lennie!",minLength(8))},
+    password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:helpers.withMessage("A jelszónak legalább 8 karakternek kell lennie!", minLength(8))},
 };
 });
 
-const v$=useVuelidate(rules,form);
-const SubmitEvent=async()=>{
+const v$=useVuelidate(rules, form);
+const SubmitEvent = async() => {
   const result=await v$.value.$validate();
   if (result) {
     let req = null
@@ -61,8 +61,8 @@ const SubmitEvent=async()=>{
         await alert("Sikertelen belépés! Próbáld újra!")
     }
         if (req){
-            await alert("Sikeres belépés csita!");
-            console.log("ok");
+            await alert("Sikeres belépés!");
+            // console.log("Logged in");
             router.push("/car")
             console.log(req);
             return
