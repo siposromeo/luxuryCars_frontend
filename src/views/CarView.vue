@@ -15,7 +15,7 @@
               <p class="card-text">Lóerő: {{ car.loero }}</p>
               <p class="card-text">Férőhely: {{ car.ferohely }}</p>
             </div>
-            <button class="btn btn-outline-primary">Foglald le most!</button>
+            <button class="btn btn-outline-primary" v-if="userstore.isLoggedIn">Foglald le most!</button>
           </div>
         </div>
       </div>
@@ -31,7 +31,9 @@
 <script setup>
 import { ref } from 'vue';
 import CarService from '../services/carservice'
+import { useUserStorage } from '@/stores/userstore';
 
+const userstore = useUserStorage();
 const cars = ref();
 const page = ref(1);
 const max_page = ref();

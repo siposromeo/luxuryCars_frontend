@@ -35,7 +35,9 @@ import axios from 'axios';
 import useVuelidate from '@vuelidate/core';
 import { required,email,minLength,helpers, alpha } from '@vuelidate/validators';
 import { useRouter } from 'vue-router';
+import {useUserStorage} from '../stores/userstore';
  
+const userstore = useUserStorage();
 let router = useRouter();
 const form=ref({
   name:'',
@@ -61,7 +63,10 @@ const SubmitEvent = async() => {
         await alert("Sikertelen belépés! Próbáld újra!")
     }
         if (req){
-            await alert("Sikeres belépés!");
+            userstore.setUser(req.data.user)
+            userstore.setToken(req.data.token)
+            userstore.setLoggedIn(true)
+            // await alert("Sikeres belépés!");
             // console.log("Logged in");
             router.push("/car")
             console.log(req);
@@ -72,14 +77,12 @@ const SubmitEvent = async() => {
     alert("Sikertelen regisztráció")
     }
 }
-
-
-async function Login(){
-    await axios.post('http://127.0.0.1:8000/api/login',form.value)
-    console.log("ok");
-    await alert("Sikeres belépés csita!");
-    router.push("/car")
-}
+// async function Login(){
+//     await axios.post('http://127.0.0.1:8000/api/login',form.value)
+//     console.log("ok");
+//     // await alert("Sikeres belépés!");
+//     router.push("/car")
+// }
 
 </script>
 

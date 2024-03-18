@@ -35,6 +35,10 @@ const router = createRouter({
             component: LoginVue
         },
         {
+            path: '/logout',
+            name: 'Logout'
+        },
+        {
             path: '/registration',
             name: 'Registration',
             component: RegisterVue

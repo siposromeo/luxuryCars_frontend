@@ -15,10 +15,16 @@
           <RouterLink class="a" to="/contact">A csapatról</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/login">Bejelentkezés</RouterLink>
+          <RouterLink class="a" to="/login" v-if="!userstore.isLoggedIn">Bejelentkezés</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/registration">Regisztráció</RouterLink>
+          <RouterLink class="a" to="/registration" v-if="!userstore.isLoggedIn">Regisztráció</RouterLink>
+        </li>
+        <li>
+          <RouterLink class="a" to="/profile" v-if="userstore.isLoggedIn">Profil</RouterLink>
+        </li>
+        <li>
+          <RouterLink class="a" to="/" @click="logout()" v-if="userstore.isLoggedIn">Kijelentkezés</RouterLink>
         </li>
         </ul>
       </nav>
@@ -29,6 +35,17 @@
   
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
+import { useUserStorage } from '@/stores/userstore';
+import axios from 'axios';
+const userstore = useUserStorage();
+
+
+async function logout() {
+  const req = await axios.post('http://127.0.0.1:8000/api/logout','',{headers:{'Authorization': `Bearer ${userstore.token}`}})
+  userstore.setUser(null)
+  userstore.setLoggedIn(false)
+  userstore.setToken('')
+  }
 </script>
   
 <style scoped>
