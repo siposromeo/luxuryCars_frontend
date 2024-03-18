@@ -32,7 +32,7 @@
 
       <div style="font-weight: bolder; color: orange;" class="col-md-2 m-3 mb-3">
         <label for="phoneNumberInput" class="form-label">Telefonszám</label>
-        <input type="phoneNumber" id="phoneNumberInput" class="form-control" v-model="form.telefonszam" required>
+        <input type="tel" id="phoneNumberInput" name="phone" class="form-control" v-model="form.telefonszam" required maxlength="12">
       </div>
 
       <div style="color: orange;" class="col-md-2 m-3">
