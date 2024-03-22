@@ -25,6 +25,7 @@ export const useUserStorage = defineStore({
       setToken(token) {
         this.token = token;
       }
-    }
+    },
+    persist: true,
   })
   

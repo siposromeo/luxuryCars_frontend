@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
+import piniaPluginPersistedState from 'pinia-plugin-persistedstate';
 import App from './App.vue';
 
 import 'primevue/resources/primevue.min.css'
@@ -14,7 +15,10 @@ import router from './router/router';
 const app = createApp(App)
 app.use(PrimeVue);
 
-app.use(createPinia())
+const pinia = createPinia()
+
+pinia.use(piniaPluginPersistedState)
+app.use(pinia)
 
 app.use(router)
 

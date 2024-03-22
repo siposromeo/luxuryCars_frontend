@@ -28,11 +28,12 @@
       </div>
     </div>
   </div>
-  <div class="d-block m-2">
+  <div class="row-cols-1 m-2 d-flex rounded">
+    <div class="mb-2">
     <div class="card-group">
       <div class="card">
         <img
-          src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1685458010/autoexpress/2023/05/Porsche%20911%20GTS%20UK%20001_otx6j7.jpg"
+          src="https://s1.cdn.autoevolution.com/images/gallery/porsche-911-carrera-4-gts-2021-7163_9.jpg"
           class="w-100 h-100 rounded">
       </div>
       <div class="card">
@@ -48,13 +49,14 @@
       <div class="card">
         <div class="card-body text-center">
           <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.3rem;">Nagy választék</h1>
-          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
+          <RouterLink class="btn btn-warning p-3 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
         </div>
       </div>
       <div class="card">
-        <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-auto h-auto rounded h-100">
+        <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100 h-100 rounded">
       </div>
     </div>
+  </div>
   </div>
 </template>
 

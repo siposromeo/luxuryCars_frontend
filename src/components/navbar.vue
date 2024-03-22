@@ -7,12 +7,12 @@
       <nav class="menu">
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <ul class="justify-content-around">
+        <ul class="justify-content-end">
           <li>
           <RouterLink class="a" to="/car">Autóink</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/contact">A csapatról</RouterLink>
+          <RouterLink class="a" to="/contact">Team</RouterLink>
         </li>
         <li>
           <RouterLink class="a" to="/login" v-if="!userstore.isLoggedIn">Bejelentkezés</RouterLink>
@@ -63,6 +63,7 @@ a {
 }
 li {
     list-style: none;
+    margin: auto;
 }
 header {
     width: 100%;
@@ -80,8 +81,8 @@ header {
     color: #222;
     height: 100%;
     float: left;
-    margin: 0 0 0 2rem;
-    letter-spacing: 0.5cap;
+    margin: 0 0 0 3.8rem;
+    letter-spacing: 0.6cap;
 }
 .menu {
     width: 40%;
@@ -92,7 +93,7 @@ header {
 .menu ul {
     width: 100%;
     height: 50%;
-    margin: 0;
+    margin: auto;
     padding: 0;
     display: -webkit-box;
     display: -moz-box;
