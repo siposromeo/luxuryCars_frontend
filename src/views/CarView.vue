@@ -1,17 +1,18 @@
 <template>
-  <div class="d-flex row-cols-3 container justify-content-between container align-items-center mt-2">
+  <!-- <div class="d-flex row-cols-3 container justify-content-between container align-items-center mt-1 ">
     <button class="btn btn-warning float-start" @click="lapozasLe">Vissza</button>
-    <hr style="display: none;" class="m-2" />
+    <hr style="display: none;" class="m-3"/>
     <button class="btn btn-warning float-end" @click="lapozasFel">Előre</button>
-  </div>
-  <div class="row-cols-md-5 row-cols-sm-1 row-cols-lg-4 row-cols-xl-5 d-flex container-fluid justify-content-center align-items-center">
-    <div class="w-100 m-2 row row-cols-2 d-flex container justify-content-center "> 
+  </div> -->
+
+  <div class="row container-fluid justify-content-center justify-content-between align-items-center">
+    <div class="w-100 m-3 row row-cols-2 d-flex"> 
       <div class="d-flex" v-for="car in cars">
-        <div class="card mb-2 mt-2 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-          <div class="card-body d-flex flex-column justify-content-center">
-            <img class="w-100 h-75 rounded" :src="car.kep_Url">
+        <div class="card mb-2 mt-3 col-xl-12">
+          <div class="card-body d-flex flex-column flex-row justify-content-center">
+            <img class="w-auto h-75 rounded" :src="car.kep_Url">
             <h2 class="card-title">{{ car.marka_modelnev }}</h2>
-            <div class="container justify-content-center justify-content-between align-items-center mt-2">
+            <div class="container-fluid justify-content-center justify-content-between align-items-center mt-2">
               <p class="card-text">Lóerő: {{ car.loero }}</p>
               <p class="card-text">Férőhely: {{ car.ferohely }}</p>
             </div>
@@ -21,11 +22,14 @@
       </div>
     </div>
   </div>
-  <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mb-2">
+
+  <!-- GOMBOK -->
+  <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mb-3">
     <button class="btn btn-warning float-start" @click="lapozasLe">Vissza</button>
     <div></div>
     <button class="btn btn-warning float-end" @click="lapozasFel">Előre</button>
   </div>
+  <!-- GOMBOK -->
 </template>
 
 <script setup>
@@ -76,7 +80,7 @@ CarService.getAllCars()
 .card {
   border: 2px solid black;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
   background-color: white;

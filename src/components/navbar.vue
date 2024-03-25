@@ -7,18 +7,18 @@
       <nav class="menu">
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <ul class="justify-content-end">
+        <ul>
           <li>
           <RouterLink class="a" to="/car">Autóink</RouterLink>
         </li>
         <li>
           <RouterLink class="a" to="/contact">Team</RouterLink>
         </li>
-        <li>
-          <RouterLink class="a" to="/login" v-if="!userstore.isLoggedIn">Bejelentkezés</RouterLink>
+        <li v-if="!userstore.isLoggedIn">
+          <RouterLink class="a" to="/login" >Bejelentkezés</RouterLink>
         </li>
-        <li>
-          <RouterLink class="a" to="/registration" v-if="!userstore.isLoggedIn">Regisztráció</RouterLink>
+        <li v-if="!userstore.isLoggedIn">
+          <RouterLink class="a" to="/registration" >Regisztráció</RouterLink>
         </li>
         <li>
           <RouterLink class="a" to="/profile" v-if="userstore.isLoggedIn">Profil</RouterLink>
@@ -52,14 +52,13 @@ async function logout() {
 html, body {
     width: 100%;
     height: 100%;
-    margin: 0;
     padding: 0;
     text-transform: uppercase;
     text-shadow: 1.2px 1px 10px #000;
 }
 a {
   color: #222;
-    text-decoration: none;
+  text-decoration: none;
 }
 li {
     list-style: none;
@@ -68,24 +67,23 @@ li {
 header {
     width: 100%;
     height: 54px;
-    line-height: 54px;
-    text-align: center;
+    line-height: 50px;
     font-family: fantasy;
     background-color: #f1c40f;
 }
 .brand {
     width: auto;
-    text-decoration: none;
     font-family: fantasy;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin: auto;
     color: #222;
     height: 100%;
     float: left;
-    margin: 0 0 0 3.8rem;
-    letter-spacing: 0.6cap;
+    margin: 0 0 0 3rem;
+    letter-spacing: 0.5cap;
 }
 .menu {
-    width: 40%;
+    width: 630px;
     height: 100%;
     float: right;
     letter-spacing: 0.2cap;
@@ -93,7 +91,6 @@ header {
 .menu ul {
     width: 100%;
     height: 50%;
-    margin: auto;
     padding: 0;
     display: -webkit-box;
     display: -moz-box;
@@ -119,7 +116,7 @@ header {
     display: none;
     cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .menu {
         width: 100%;
         height: auto;
