@@ -11,12 +11,12 @@
           <label for="emailInput" class="form-label"
             style="color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;">Email
             cím</label>
-          <input type="email" class="form-control w-100 m-auto" id="emailInput" v-model="form.email" required>
+          <input type="email" class="form-control w-100 m-auto" id="emailInput" v-model="form.email" required maxlength="25">
         </div>
         <div>
           <label for="inputPassword" class="form-label"
             style="font-weight: bolder; color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;">Jelszó</label>
-          <input type="password" id="inputPassword" class="form-control w-100 m-auto" v-model="form.password" required>
+          <input type="password" id="inputPassword" class="form-control w-100 m-auto" v-model="form.password" required minlength="8" maxlength="18">
         </div>
         <p class="mt-2" style="font-size: 0.6rem;">
           FONTOS! A jelszavad legyen legalább 8 karakter.
@@ -27,7 +27,7 @@
 
       <div style="color: orange;" class="col-md-2 m-3">
         <label for="licenceNumber" class="form-label" style="letter-spacing: -1.1px;">Jogosítvány szám</label>
-        <input type="licenceNumberType" id="licenceNumber" class="form-control" v-model="form.jogositvany_szam" required>
+        <input type="licenceNumberType" id="licenceNumber" class="form-control" v-model="form.jogositvany_szam" required maxlength="14">
       </div>
 
       <div style="font-weight: bolder; color: orange;" class="col-md-2 m-3 mb-3">
@@ -37,7 +37,7 @@
 
       <div style="color: orange;" class="col-md-2 m-3 mb-3">
         <label for="billingAddress" class="form-label">Számlázási cím</label>
-        <input type="billingAddressType" id="billingAddress" class="form-control" v-model="form.szamlazasi_cim" required>
+        <input type="billingAddressType" id="billingAddress" class="form-control" v-model="form.szamlazasi_cim" required maxlength="40">
       </div>
     </div>
 
@@ -93,7 +93,7 @@ const v$=useVuelidate(rules,form);
 const SubmitEvent=async()=>{
   const result = await v$.value.$validate();
   if (result) {
-    await axios.post('http://127.0.0.1:8000/api/register',form.value)
+    await axios.post('https://bgs.jedlik.eu/luxurycars/luxurycars/api/register',form.value)
   // console.log("ok");
   await alert("Sikeres regisztráció!");
   router.push("/login")

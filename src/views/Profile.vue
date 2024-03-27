@@ -1,84 +1,39 @@
 <template>
-    <div class="container mt-2 mb-3 col-md-12 col-lg-12">
-        <div class="main-body mt-3">
-            <div class="row gutters-sm">
-                <div class="col-md-4 mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex flex-column align-items-center text-center">
-                                <div class="mt-3">
-                                    <h4>felhaszn. neve</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Full Name</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    Kenneth Valdez
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Email</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    fip@jukmuh.al
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Phone</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    (239) 816-9029
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Mobile</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    (320) 380-4539
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Address</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                    Bay Area, San Francisco, CA
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <a class="btn btn-info btn-m d-grid gap-2 col-6 mx-auto btn-warning"
-                                        href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- <div class="row row-cols-1 m-3 d-flex rounded card-group">
+      <h1>Profil és módosítás</h1>
+      <div>
+        <label>Name:</label>
+        <input type="text" v-model="userData.name" :disabled="!isEditMode" />
+      </div>
+      <div>
+        <label>Driving License Number:</label>
+        <input type="text" v-model="userData.drivingLicense" :disabled="!isEditMode" />
+      </div>
+      <div>
+        <label>Phone Number:</label>
+        <input type="tel" v-model="userData.phoneNumber" :disabled="!isEditMode" />
+      </div>
+      <div>
+        <label>Billing Address:</label>
+        <input type="text" v-model="userData.billingAddress" :disabled="!isEditMode" />
+      </div>
+      <button @click="toggleEditMode">{{ isEditMode ? 'Save Changes' : 'Edit Profile' }}</button>
+    </div> -->
+  </template>
+  
+  <script setup>
+//   import { ref } from 'vue';
+//   import { useUserStorage } from '@/stores/userstore';
 
-</template>
+//   const userstore = useUserStorage();
+//   const isEditMode = ref(false);
 
-<script setup>
+//   const userData = userstore.userData;
 
-</script>
+//   const toggleEditMode = () => {
+//     isEditMode.value = !isEditMode.value;
+//     };
+  </script>
 
 <style scoped>
 body{

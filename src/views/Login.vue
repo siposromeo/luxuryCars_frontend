@@ -33,7 +33,7 @@
 import {ref,computed} from 'vue';
 import axios from 'axios';
 import useVuelidate from '@vuelidate/core';
-import { required,email,minLength,helpers, alpha } from '@vuelidate/validators';
+import { required,email,minLength,helpers } from '@vuelidate/validators';
 import { useRouter } from 'vue-router';
 import {useUserStorage} from '../stores/userstore';
  
@@ -57,7 +57,7 @@ const SubmitEvent = async() => {
   if (result) {
     let req = null
     try {
-        req = await axios.post('http://127.0.0.1:8000/api/login', form.value)
+        req = await axios.post('https://bgs.jedlik.eu/luxurycars/luxurycars/api/login', form.value)
     } catch (error) {
         console.log(error)
         await alert("Sikertelen belépés! Próbáld újra!")
@@ -66,8 +66,6 @@ const SubmitEvent = async() => {
             userstore.setUser(req.data.user)
             userstore.setToken(req.data.token)
             userstore.setLoggedIn(true)
-            // await alert("Sikeres belépés!");
-            // console.log("Logged in");
             router.push("/car")
             console.log(req);
             return
@@ -77,13 +75,6 @@ const SubmitEvent = async() => {
     alert("Sikertelen regisztráció")
     }
 }
-// async function Login(){
-//     await axios.post('http://127.0.0.1:8000/api/login',form.value)
-//     console.log("ok");
-//     // await alert("Sikeres belépés!");
-//     router.push("/car")
-// }
-
 </script>
 
 <style scoped>

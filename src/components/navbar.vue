@@ -36,12 +36,12 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
 import { useUserStorage } from '@/stores/userstore';
-import axios from 'axios';
+import Axios from 'axios';
 const userstore = useUserStorage();
 
-
 async function logout() {
-  const req = await axios.post('http://127.0.0.1:8000/api/logout','',{headers:{'Authorization': `Bearer ${userstore.token}`}})
+  const req = await Axios.post('/logout','' ,{headers:{'Authorization': `Bearer ${userstore.token}`}});
+  // console.log(req);
   userstore.setUser(null)
   userstore.setLoggedIn(false)
   userstore.setToken('')

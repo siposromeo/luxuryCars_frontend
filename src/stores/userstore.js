@@ -7,14 +7,6 @@ export const useUserStorage = defineStore({
       isLoggedIn: false,
       token: ''
     }),
-    // getters: {
-    //     getUser() {
-    //       return this.user;
-    //     },
-    //     getLoggedIn() {
-    //       return this.loggedIn;
-    //     }
-    // },
     actions: {
       setUser(user) {
         this.user = user;
