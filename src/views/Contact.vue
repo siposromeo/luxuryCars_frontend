@@ -1,5 +1,4 @@
 <template>
-  <!-- <h1 class="mt-5">Luxury Cars Hungary</h1> -->
   <p class="m-5"><b>A tervünk az, hogy egy egyszerű és letisztult weboldalt alkossunk, ami megálja a helyét az
       osztálytársaink és évfolyamtársai weboldalai mellett is. Szeretnénk, hogy a weboldal használatának élménye legyen
       könnyű és magától érthető. Szerény véleményünk szerintünk lenne jelentős igény különböző szuper kategóriás autók
