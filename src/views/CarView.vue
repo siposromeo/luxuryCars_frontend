@@ -1,9 +1,4 @@
 <template>
-  <!-- <div class="d-flex row-cols-3 container justify-content-between container align-items-center mt-1 ">
-    <button class="btn btn-warning float-start" @click="lapozasLe">Vissza</button>
-    <hr style="display: none;" class="m-3"/>
-    <button class="btn btn-warning float-end" @click="lapozasFel">Előre</button>
-  </div> -->
 
   <div class="row container-fluid justify-content-center justify-content-between align-items-center">
     <div class="w-100 m-3 row row-cols-2 d-flex"> 

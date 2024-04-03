@@ -11,6 +11,6 @@ export default {
         })
     },
     async lapozz(num){
-        return await Axios.get(`bgs.jedlik.eu/luxurycars/luxurycars/api/cars?page=${num}`)
+        return await Axios.get(`/cars?page=${num}`)
     }
 }
