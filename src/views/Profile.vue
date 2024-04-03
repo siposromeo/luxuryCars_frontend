@@ -1,38 +1,39 @@
 <template>
-    <!-- <div class="row row-cols-1 m-3 d-flex rounded card-group">
+    <div class="row row-cols-1 m-3 d-flex rounded card-group">
       <h1>Profil és módosítás</h1>
       <div>
         <label>Name:</label>
-        <input type="text" v-model="userData.name" :disabled="!isEditMode" />
+        <input type="text" v-model="userData.user.name" disabled/>
       </div>
       <div>
         <label>Driving License Number:</label>
-        <input type="text" v-model="userData.drivingLicense" :disabled="!isEditMode" />
+        <input type="text" v-model="userData.user.jogositvany_szam" disabled/>
       </div>
       <div>
-        <label>Phone Number:</label>
-        <input type="tel" v-model="userData.phoneNumber" :disabled="!isEditMode" />
+        <label>Telefonszám:</label>
+        <input type="tel" v-model="userData.user.telefonszam" disabled/>
       </div>
       <div>
-        <label>Billing Address:</label>
-        <input type="text" v-model="userData.billingAddress" :disabled="!isEditMode" />
+        <label>Számlázási cím:</label>
+        <input type="text" v-model="userData.user.szamlazasi_cim" disabled/>
       </div>
-      <button @click="toggleEditMode">{{ isEditMode ? 'Save Changes' : 'Edit Profile' }}</button>
-    </div> -->
+      <Button class="">Módosítás</Button>
+    </div>
   </template>
   
   <script setup>
-//   import { ref } from 'vue';
-//   import { useUserStorage } from '@/stores/userstore';
+  import { ref } from 'vue';
+  import { useUserStorage } from '@/stores/userstore';
 
-//   const userstore = useUserStorage();
-//   const isEditMode = ref(false);
+  const userstore = useUserStorage();
+  const isEditMode = ref(false);
 
-//   const userData = userstore.userData;
+  const userData = userstore;
+  console.log(userData.isLoggedIn);
 
-//   const toggleEditMode = () => {
-//     isEditMode.value = !isEditMode.value;
-//     };
+  // const toggleEditMode = () => {
+  //   isEditMode.value = !isEditMode.value;
+  //   };
   </script>
 
 <style scoped>
