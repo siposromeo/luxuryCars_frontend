@@ -10,7 +10,6 @@
                 <input type="password" id="inputPassword" class="form-control w-50 m-auto" v-model="form.password">
             </div>
             <div class="mb-3 d-flex justify-content-center">
-                <!-- <button type="submit" class="btn btn-outline-secondary" style="margin-top: 1rem;" @submit="Login">Bejelentkezés</button> -->
                 <input type="submit" class="btn btn-outline-secondary mt-4" value="Belépés">
             </div>
         </div>
@@ -46,7 +45,7 @@ const form=ref({
 
 const rules= computed(()=>{
 return{
-    email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email:helpers.withMessage("Valódi emailt adjon meg!",email)},
+    email:{required:helpers.withMessage("Kötelező az email mezőt kitölteni",required),email:helpers.withMessage("Valódi emailt adjon meg!", email)},
     password:{required:helpers.withMessage("Kötelező a jelszó mezőt kitölteni",required),minLength:helpers.withMessage("A jelszónak legalább 8 karakternek kell lennie!", minLength(8))},
 };
 });

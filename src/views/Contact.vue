@@ -1,15 +1,19 @@
 <template>
-  <p class="m-5"><b>A tervünk az, hogy egy egyszerű és letisztult weboldalt alkossunk, ami megálja a helyét az
-      osztálytársaink és évfolyamtársai weboldalai mellett is. Szeretnénk, hogy a weboldal használatának élménye legyen
-      könnyű és magától érthető. Szerény véleményünk szerintünk lenne jelentős igény különböző szuper kategóriás autók
-      kibérlésére. Közlekedés szerves része napjainknak, miért is ne lehetne, hogy azokat az utakat valami igazán
-      különleges járműben tegyük meg.</b>
-  </p>
-  <h3 class="ms-5">A rendelés folyamata:</h3>
-  <p class="ms-5"><i>Közel 30 autó áll rendelkezésre, amely csak arra vár, hogy kipróbálja őket.</i> Válassza ki a
-    kiválasztott autót, jelölje ki az időtartamot mikor szeretné az autót használni. És mi felvesszük a kapcsolatot
-    Önnel email formájában.
-  </p>
+  <div class="container-fluid mt-5 mb-5 d-block justify-content-center">
+    <p>A tervünk az, hogy egy egyszerű és letisztult weboldalt alkossunk, ami megálja a helyét az
+        osztálytársaink és évfolyamtársai weboldalai mellett is. Szeretnénk, hogy a weboldal használatának élménye
+        legyen
+        könnyű és magától érthető. Szerény véleményünk szerintünk lenne jelentős igény különböző szuper kategóriás autók
+        kibérlésére. Közlekedés szerves része napjainknak, miért is ne lehetne, hogy azokat az utakat valami igazán
+        különleges járműben tegyük meg.
+    </p>
+    <h3>A rendelés folyamata:</h3>
+    <p><i>Közel 30 autó áll rendelkezésre, amely csak arra vár, hogy kipróbálja őket.</i> Válassza ki a
+      kiválasztott autót, jelölje ki az időtartamot mikor szeretné az autót használni. És mi felvesszük a kapcsolatot
+      Önnel email formájában.
+    </p>
+  </div>
+
 
   <div class="d-flex col-sm-12 col-md-12 col-lg-12 col-xl-12 justify-content-center">
     <div class="card m-3">
@@ -37,7 +41,7 @@
         </div>
         <div class="d-grid m-2">
           <a href="https://www.snapchat.com/add/lanarhoades?web_client_id=49bab0ae-aeb0-4ac4-9cb6-3d237046dc72"
-          target="_blank" class="btn btn-warning">SnapChat</a>
+            target="_blank" class="btn btn-warning">SnapChat</a>
         </div>
         <div class="d-grid m-2">
           <a href="https://steamcommunity.com/id/love_sosa/" target="_blank" class="btn btn-dark">Steam</a>
@@ -57,6 +61,7 @@
   font-size: 1rem;
   font-weight: 700;
 }
+
 h1 {
   font-size: 2.3rem;
   font-weight: 400;

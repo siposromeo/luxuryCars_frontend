@@ -1,23 +1,23 @@
 <template>
-    <div class="row row-cols-1 m-3 d-flex rounded card-group">
+    <div class="row-cols-1 row-cols-lg-1 row-cols-sm-1 mx-auto d-block mt-5">
       <h1>Profil és módosítás</h1>
-      <div>
-        <label>Name:</label>
-        <input type="text" v-model="userData.user.name" disabled/>
+      <div class="m-1">
+        <label class="form-label">Name</label>
+        <input type="text" v-model="userData.user.name" disabled class="rounded form-control"/>
       </div>
-      <div>
-        <label>Driving License Number:</label>
-        <input type="text" v-model="userData.user.jogositvany_szam" disabled/>
+      <div class="m-1">
+        <label class="form-label">Driving License Number</label>
+        <input type="text" v-model="userData.user.jogositvany_szam" disabled class="rounded form-control"/>
       </div>
-      <div>
-        <label>Telefonszám:</label>
-        <input type="tel" v-model="userData.user.telefonszam" disabled/>
+      <div class="m-1">
+        <label class="form-label">Telefonszám</label>
+        <input type="tel" v-model="userData.user.telefonszam" disabled class="rounded form-control"/>
       </div>
-      <div>
-        <label>Számlázási cím:</label>
-        <input type="text" v-model="userData.user.szamlazasi_cim" disabled/>
+      <div class="m-1">
+        <label class="form-label">Számlázási cím</label>
+        <input type="text" v-model="userData.user.szamlazasi_cim" disabled class="rounded form-control"/>
+        <Button class="btn btn-warning w-75 d-block mx-auto mt-4 mb-5">Módosítás</Button>
       </div>
-      <Button class="">Módosítás</Button>
     </div>
   </template>
   
@@ -30,10 +30,6 @@
 
   const userData = userstore;
   console.log(userData.isLoggedIn);
-
-  // const toggleEditMode = () => {
-  //   isEditMode.value = !isEditMode.value;
-  //   };
   </script>
 
 <style scoped>

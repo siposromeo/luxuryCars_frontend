@@ -32,7 +32,8 @@
 
       <div style="font-weight: bolder; color: orange;" class="col-md-2 m-3 mb-3">
         <label for="phoneNumberInput" class="form-label">Telefonszám</label>
-        <input type="tel" id="phoneNumberInput" name="phone" class="form-control" v-model="form.telefonszam" required maxlength="12">
+        <input type="tel" minlength="8" maxlength="12" id="phoneNumberInput" name="phone" class="form-control" v-model="form.telefonszam" required 
+        pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
       </div>
 
       <div style="color: orange;" class="col-md-2 m-3 mb-3">
@@ -117,5 +118,15 @@ const SubmitEvent=async()=>{
   margin: auto;
   padding: 10px;
   border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=tel]{
+    -moz-appearance: textfield;
 }
 </style>
