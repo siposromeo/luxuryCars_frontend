@@ -3,7 +3,7 @@
       <template #item="cars">
         <div class="p-2 m-2 d-lg-flex d-grid align-items-center">
           <div class="mx-auto ms-auto m-lg-auto">
-            <img :src="cars.data.kep_Url" style="max-width: 500px; max-height: 250px;" class="rounded"/>
+            <img :src="cars.data.kep_Url" style="max-width: 540px; max-height: 260px;" class="rounded"/>
           </div>
         </div>
       </template>
@@ -22,38 +22,39 @@
       </div>
     </div>
     <div class="card bg-warning text-white">
-      <h1 class="text-center mt-5">2 év</h1>
+      <h1 class="text-center mt-5">Több, mint 10 éve</h1>
       <div class="card-body">
-        <h5 class="card-title text-center">Tapasztalat</h5>
+        <!-- <h5 class="card-title text-center">Tapasztalat</h5> -->
       </div>
     </div>
   </div>
   <div class="row-cols-1 m-2 d-flex rounded">
     <div class="mb-2">
+
     <div class="card-group">
       <div class="card">
         <img
-          src="https://s1.cdn.autoevolution.com/images/gallery/porsche-911-carrera-4-gts-2021-7163_9.jpg"
-          class="w-100 h-100 rounded">
+          src="https://s1.cdn.autoevolution.com/images/gallery/JAGUAR-F-Type-400-Coupe-5876_12.jpg"
+          class="w-auto h-auto rounded">
       </div>
       <div class="card">
-        <div class="card-body text-center">
-          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.3rem;">Béreld ki akár most
-            álomautodat</h1>
+        <div class="card-body text-center mt-5">
+          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5rem;">Béreld ki akár most álom autódat</h1>
           <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/registration">Regisztráció
           </RouterLink>
         </div>
       </div>
     </div>
+
     <div class="card-group">
       <div class="card">
-        <div class="card-body text-center">
-          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.3rem;">Nagy választék</h1>
-          <RouterLink class="btn btn-warning p-3 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
+        <div class="card-body text-center mt-5">
+          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5rem;">Nagy választék</h1>
+          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
         </div>
       </div>
       <div class="card">
-        <img src="https://s1.cdn.autoevolution.com/images/gallery/LEXUS-LFA-4155_22.jpg" class="w-100 h-100 rounded">
+        <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="w-auto h-auto rounded">
       </div>
     </div>
   </div>
