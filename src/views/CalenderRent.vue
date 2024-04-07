@@ -1,0 +1,55 @@
+<template>
+    <VueDatePicker v-model="date" range/>
+    <div class="card">
+        <img class="w-50 h-50" :src="car.kep_Url" alt="">
+    </div>
+    <button @click="foglalas()">FOGLALÁS</button>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+import { useRoute } from 'vue-router';
+import CarService from '../services/carservice'
+import { useUserStorage } from '@/stores/userstore';
+import axios from 'axios';
+import router from '@/router/router';
+const userstore = useUserStorage();
+
+const date = ref();
+const route = useRoute();
+const car_id = route.params.id;
+const car = ref();
+
+async function setCar(){
+    car.value = await CarService.getCarById(car_id)
+    console.log(car.value);
+}
+setCar()
+
+const foglalas = async () =>{
+    const foglalasData = {
+        berles_Kezdete: date.value[0].toISOString().split('T')[0],
+        berles_Vege: date.value[1].toISOString().split('T')[0],
+        megrendeles_datum: new Date().toISOString().split('T')[0],
+        auto_id: car.value.id
+    }
+    await axios.post('/rendeles',foglalasData ,{headers:{'Authorization': `Bearer ${userstore.token}`}})
+    router.push('/car')
+    // console.log(date.value[0].toISOString().split('T')[0]);
+    // console.log(date.value[1].toISOString().split('T')[0]);
+}
+onMounted(() => {
+    const startDate = new Date();
+    const endDate = new Date(new Date().setDate(startDate.getDate() + 7));
+    date.value = [startDate, endDate];
+    console.log();
+})
+
+
+</script>
+
+<style scoped>
+
+</style>

@@ -11,7 +11,7 @@
               <p class="card-text">Lóerő: {{ car.loero }}</p>
               <p class="card-text">Férőhely: {{ car.ferohely }}</p>
             </div>
-            <button class="btn btn-outline-primary" v-if="userstore.isLoggedIn">Foglald le most!</button>
+            <router-link class="btn btn-outline-primary" v-if="userstore.isLoggedIn" :to='"/calendarrent/" +car.id'>Foglald le most!</router-link>
           </div>
         </div>
       </div>

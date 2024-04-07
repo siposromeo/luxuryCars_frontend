@@ -58,7 +58,7 @@ const SubmitEvent = async() => {
     try {
         req = await axios.post('https://bgs.jedlik.eu/luxurycars/luxurycars/api/login', form.value)
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         await alert("Sikertelen belépés! Próbáld újra!")
     }
         if (req){
@@ -66,7 +66,7 @@ const SubmitEvent = async() => {
             userstore.setToken(req.data.token)
             userstore.setLoggedIn(true)
             router.push("/car")
-            console.log(req);
+            // console.log(req);
             return
         }
     }
