@@ -1,6 +1,6 @@
 <template>
   <div class="row-cols-1 row-cols-lg-1 row-cols-sm-1 mx-auto d-block mt-5">
-    <h1>Profil és módosítás</h1>
+    <h1>Profil és foglalások</h1>
     <div class="m-1">
       <label class="form-label">Name</label>
       <input type="text" v-model="userData.user.name" disabled class="rounded form-control" />
@@ -23,7 +23,7 @@
     <h1 class="d-flex justify-content-center">Foglalások</h1>
     <table class="table">
       <thead>
-        <tr>
+        <tr class="table-warning">
           <th scope="col">Ár</th>
           <th scope="col">Megrendelés dátuma</th>
           <th scope="col">Tól</th>
@@ -34,7 +34,6 @@
       <tbody>
         <tr v-for="item in data">
           <td>{{ item.element.ar }}</td>
-          <!-- <td>{{ rendeles.auto_id }}</td> -->
           <td>{{ item.element.megrendeles_datum }}</td>
           <td>{{ item.resp.berles_Kezdete.split(" ")[0] }}</td>
           <td>{{ item.resp.berles_Vege.split(" ")[0] }}</td>
@@ -51,7 +50,6 @@ import { useRoute } from 'vue-router';
 import CarService from '../services/carservice'
 import { useUserStorage } from '@/stores/userstore';
 
-// const car = ref();
 const data = ref([]);
 const userstore = useUserStorage();
 
