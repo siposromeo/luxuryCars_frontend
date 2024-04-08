@@ -36,9 +36,7 @@ const foglalas = async () =>{
         auto_id: car.value.id
     }
     await axios.post('/rendeles',foglalasData ,{headers:{'Authorization': `Bearer ${userstore.token}`}})
-    router.push('/car')
-    // console.log(date.value[0].toISOString().split('T')[0]);
-    // console.log(date.value[1].toISOString().split('T')[0]);
+    router.push('/profile')
 }
 onMounted(() => {
     const startDate = new Date();

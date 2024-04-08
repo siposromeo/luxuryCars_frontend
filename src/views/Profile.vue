@@ -19,25 +19,25 @@
       <!-- <Button class="btn btn-warning w-75 d-block mx-auto mt-4 mb-5">Módosítás</Button> -->
     </div>
   </div>
-  <div class="row-cols-1 row-cols-lg-1 row-cols-sm-1 mx-auto d-block mt-5">
-    <h1 class="d-flex justify-content-center">Foglalások</h1>
+  <h1 class="d-flex justify-content-center mt-5">Foglalások</h1>
+  <div class="row-cols-6 row-cols-lg-6 row-cols-sm-6 d-block mx-5">
     <table class="table">
       <thead>
-        <tr class="table-warning">
+        <tr class="table-dark text-center" style="font-weight: bolder;">
           <th scope="col">Ár</th>
-          <th scope="col">Megrendelés dátuma</th>
-          <th scope="col">Tól</th>
-          <th scope="col">Ig</th>
           <th scope="col">Autó</th>
+          <th scope="col">Megrendelés dátuma</th>
+          <th scope="col">Bérlés kezdete</th>
+          <th scope="col">Bérlés vége</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="table text-center border">
         <tr v-for="item in data">
           <td>{{ item.element.ar }}</td>
+          <td>{{ item.car.marka_modelnev }}</td>
           <td>{{ item.element.megrendeles_datum }}</td>
           <td>{{ item.resp.berles_Kezdete.split(" ")[0] }}</td>
           <td>{{ item.resp.berles_Vege.split(" ")[0] }}</td>
-          <td>{{ item.car.marka_modelnev }}</td>
         </tr>
       </tbody>
     </table>
@@ -46,9 +46,9 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useRoute } from 'vue-router';
 import CarService from '../services/carservice'
 import { useUserStorage } from '@/stores/userstore';
+import userservice from '@/services/userservice';
 
 const data = ref([]);
 const userstore = useUserStorage();
@@ -56,17 +56,19 @@ const userstore = useUserStorage();
 const userData = userstore
 
 setdata();
-function setdata() {
+async function setdata() {
+   await userservice.getuserbyID(userData.user.id).then(resp => {
+    console.log(resp.data[0])
+     userData.user.rendelesek = resp.data[0].rendelesek;
+  })
   userData.user.rendelesek.forEach(element => {
     CarService.getNaptarById(element.naptar_id).then(resp => {
       CarService.getCarById(element.auto_id).then(car => {
-        data.value.push({element,resp, car});
+        data.value.push({element, resp, car});
       })
     })
   });
-  // console.log(data.value);
 }
-// console.log(userData.user);
 
 </script>
 

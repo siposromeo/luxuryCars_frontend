@@ -8,6 +8,9 @@
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
         <ul>
+          <li v-if="userstore.isLoggedIn && userData.user.role == 1">
+            <RouterLink class="a" to="/admin">Admin</RouterLink>
+          </li>
           <li>
           <RouterLink class="a" to="/car">Autóink</RouterLink>
         </li>
@@ -38,7 +41,7 @@ import { RouterView, RouterLink } from 'vue-router'
 import { useUserStorage } from '@/stores/userstore';
 import Axios from 'axios';
 const userstore = useUserStorage();
-
+const userData = userstore
 async function logout() {
   const req = await Axios.post('/logout','' ,{headers:{'Authorization': `Bearer ${userstore.token}`}});
   // console.log(req);
