@@ -40,7 +40,7 @@
       <div class="card">
         <div class="card-body text-center mt-5">
           <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5rem;">Béreld ki akár most álom autódat</h1>
-          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/registration">Regisztráció
+          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Autóink
           </RouterLink>
         </div>
       </div>

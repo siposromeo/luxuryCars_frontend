@@ -1,5 +1,5 @@
 <template>
-  <div class="row-cols-1 row-cols-lg-1 row-cols-sm-1 mx-auto d-block mt-5">
+  <div class="row-cols-1 row-cols-lg-1 row-cols-sm-1 mx-auto d-block mt-5" style="user-select: none;">
     <h1>Profil és foglalások</h1>
     <div class="m-1">
       <label class="form-label">Name</label>
@@ -16,14 +16,13 @@
     <div class="m-1">
       <label class="form-label">Számlázási cím</label>
       <input type="text" v-model="userData.user.szamlazasi_cim" disabled class="rounded form-control" />
-      <!-- <Button class="btn btn-warning w-75 d-block mx-auto mt-4 mb-5">Módosítás</Button> -->
     </div>
   </div>
-  <h1 class="d-flex justify-content-center mt-5">Foglalások</h1>
-  <div class="row-cols-6 row-cols-lg-6 row-cols-sm-6 d-block mx-5">
+  <h1 class="d-flex justify-content-center mt-5" style="user-select: none;">Foglalások</h1>
+  <div class="row-cols-6 row-cols-lg-6 row-cols-sm-3 d-block mx-4 mt-3 mb-3">
     <table class="table">
       <thead>
-        <tr class="table-dark text-center" style="font-weight: bolder;">
+        <tr class="table-secondary text-center border-2 border-dark" style="font-weight: bolder; user-select: none;" >
           <th scope="col">Ár</th>
           <th scope="col">Autó</th>
           <th scope="col">Megrendelés dátuma</th>
@@ -31,7 +30,7 @@
           <th scope="col">Bérlés vége</th>
         </tr>
       </thead>
-      <tbody class="table text-center border">
+      <tbody class="table table-striped table-hover text-center border-3" style="user-select: none;">
         <tr v-for="item in data">
           <td>{{ item.element.ar }}</td>
           <td>{{ item.car.marka_modelnev }}</td>

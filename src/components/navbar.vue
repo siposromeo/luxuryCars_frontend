@@ -7,7 +7,7 @@
       <nav class="menu">
         <input type="checkbox" id="menuToggle">
         <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <ul>
+        <ul >
           <li v-if="userstore.isLoggedIn && userData.user.role == 1">
             <RouterLink class="a" to="/admin">Admin</RouterLink>
           </li>
@@ -24,10 +24,10 @@
           <RouterLink class="a" to="/registration" >Regisztráció</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/profile" v-if="userstore.isLoggedIn">Profil</RouterLink>
+          <RouterLink class="a" to="/profile" v-if="userstore.isLoggedIn" collapse>Profil</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/" @click="logout()" v-if="userstore.isLoggedIn">Kijelentkezés</RouterLink>
+          <RouterLink class="a" to="/" @click="logout()" v-if="userstore.isLoggedIn"  >Kijelentkezés</RouterLink>
         </li>
         </ul>
       </nav>
@@ -123,10 +123,12 @@ header {
     .menu {
         width: 100%;
         height: auto;
+        user-select: none;
     }
     .menu ul {
         display: block;
         max-height: 0;
+        flex-direction: column;
     	overflow: hidden;
     	-webkit-transition: max-height 0.3s;
     	-moz-transition: max-height 0.3s;
@@ -150,11 +152,16 @@ header {
         line-height: 60px;
     }
     #menuToggle:checked ~ ul {
-        max-height: 350px;
+        max-height: 330px;
+        margin-bottom: auto;
+        transition: ease-in-out 0.5s;
     }
     .menu-icon i {
         font-size: 1.7em;
     }
+    /* .menu input[type="checkbox"]: ~ {
+      max-height: 100vh;
+    } */
 }
 </style>
   

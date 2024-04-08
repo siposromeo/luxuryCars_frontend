@@ -1,13 +1,18 @@
 <template>
 
+  <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mt-3">
+    <button class="btn btn-warning float-start" @click="lapozasLe">Előző oldal</button>
+    <div class="text-center" style="font-weight: bolder; font-size: larger;">{{ page }}</div>
+    <button class="btn btn-warning float-end" @click="lapozasFel">Következő oldal</button>
+  </div>
   <div class="row container-fluid justify-content-center justify-content-between align-items-center">
     <div class="w-100 m-3 row row-cols-2 d-flex"> 
       <div class="d-flex" v-for="car in cars">
-        <div class="card mb-2 mt-3 col-xl-12">
+        <div class="card mb-2 mt-2 col-xl-12">
           <div class="card-body d-flex flex-column flex-row justify-content-center">
             <img class="w-auto h-75 rounded" :src="car.kep_Url">
             <h2 class="card-title">{{ car.marka_modelnev }}</h2>
-            <div class="container-fluid justify-content-center justify-content-between align-items-center mt-2">
+            <div class="container-fluid justify-content-center justify-content-between align-items-center">
               <p class="card-text">Lóerő: {{ car.loero }}</p>
               <p class="card-text">Férőhely: {{ car.ferohely }}</p>
             </div>
@@ -20,9 +25,9 @@
 
   <!-- GOMBOK -->
   <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mb-3">
-    <button class="btn btn-warning float-start" @click="lapozasLe">Vissza</button>
-    <div></div>
-    <button class="btn btn-warning float-end" @click="lapozasFel">Előre</button>
+    <button class="btn btn-warning float-start" @click="lapozasLe">Előző oldal</button>
+    <div class="text-center" style="font-weight: bolder; font-size: larger;">{{ page }}</div>
+    <button class="btn btn-warning float-end" @click="lapozasFel">Következő oldal</button>
   </div>
   <!-- GOMBOK -->
 </template>
