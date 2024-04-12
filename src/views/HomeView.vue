@@ -12,7 +12,7 @@
     <div class="card bg-warning text-white">
       <h1 class="text-center mt-5">30 db</h1>
       <div class="card-body">
-        <h5 class="card-title text-center">Auto áll készen, arra hogy kibereld őket</h5>
+        <h5 class="card-title text-center">Autó áll készen, arra hogy kibéreld őket!</h5>
       </div>
     </div>
     <div class="card text-warning">
@@ -24,7 +24,6 @@
     <div class="card bg-warning text-white">
       <h1 class="text-center mt-5">Több, mint 10 éve</h1>
       <div class="card-body">
-        <!-- <h5 class="card-title text-center">Tapasztalat</h5> -->
       </div>
     </div>
   </div>

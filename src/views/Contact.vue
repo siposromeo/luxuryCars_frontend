@@ -7,13 +7,13 @@
       <p>A tervünk az, hogy egy egyszerű és letisztult weboldalt alkossunk, ami megálja a helyét az
         osztálytársaink és évfolyamtársai weboldalai mellett is. Szeretnénk, hogy a weboldal használatának élménye
         legyen
-        könnyű és magától érthető. Szerény véleményünk szerintünk lenne jelentős igény különböző szuper kategóriás autók
+        könnyű és magától érthető. Szerény véleményünk szerint, jelentős igény lenne különböző felsőkategóriás autók
         kibérlésére. Közlekedés szerves része napjainknak, miért is ne lehetne, hogy azokat az utakat valami igazán
         különleges járműben tegyük meg.
       </p>
       <h3>A rendelés folyamata</h3>
-      <p class="mb-5">Közel 30 autó áll rendelkezésre, amely csak arra vár, hogy kipróbálja őket. Válassza ki a
-        kiválasztott autót, jelölje ki az időtartamot mikor szeretné az autót használni. És mi felvesszük a kapcsolatot
+      <p class="mb-5">Közel 30 autó áll rendelkezésre, amely csak arra vár, hogy kibérelje őket. Válassza ki a
+        kiválasztott autót, jelölje ki az időtartamot mikor szeretné az autót használni és mi felvesszük a kapcsolatot
         Önnel email formájában.
       </p>
     </div>
@@ -26,10 +26,10 @@
             <a href="https://github.com/siposromeo" target="_blank" class="btn btn-secondary">Github</a>
           </div>
           <div class="d-grid m-2">
-            <a href="" target="_blank" class="btn btn-primary">Facebook</a>
+            <a href="https://www.facebook.com/siposromeo4/?locale=hu_HU" target="_blank" class="btn btn-primary">Facebook</a>
           </div>
           <div class="d-grid m-2">
-            <a href="" target="_blank" class="btn btn-info">Twitter</a>
+            <a href="https://twitter.com/XVersioni" target="_blank" class="btn btn-info">Twitter</a>
           </div>
           <p class="phonenum">Telefonszám: +36 70 111 0000</p>
         </div>

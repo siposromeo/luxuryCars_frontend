@@ -21,7 +21,7 @@
 </div>
 </div>  
         <div class="mb-1 d-flex justify-content-center" style="font-weight: 500; font-size: 0.8rem;">
-            Nincs még nálunk felhasználód?
+            Nincs még nálunk felhasználói fiókod?
         </div>
         <div class="mb-5" style="margin-left: 0.3rem;">
                 <router-link to="/registration" style="color: orange; text-decoration: none;">Kattints ide</router-link>

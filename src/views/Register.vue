@@ -51,7 +51,7 @@
     </div>
   </div>  
     <div class="d-flex justify-content-center" style="font-weight: 400; font-size: 0.8rem;">
-        Van már felhasználód?
+        Van már felhasználói fiókod?
       <div style="margin-left: 0.4rem;">
         <router-link to="/login" style="color: orange; text-decoration: none; font-weight: bolder;">Kattints ide</router-link>
       </div>
