@@ -57,7 +57,7 @@ const userData = userstore
 setdata();
 async function setdata() {
    await userservice.getuserbyID(userData.user.id).then(resp => {
-    console.log(resp.data[0])
+    // console.log(resp.data[0])
      userData.user.rendelesek = resp.data[0].rendelesek;
   })
   userData.user.rendelesek.forEach(element => {

@@ -24,7 +24,7 @@ const car = ref();
 
 async function setCar(){
     car.value = await CarService.getCarById(car_id)
-    console.log(car.value);
+    // console.log(car.value);
 }
 setCar()
 
@@ -42,7 +42,6 @@ onMounted(() => {
     const startDate = new Date();
     const endDate = new Date(new Date().setDate(startDate.getDate() + 7));
     date.value = [startDate, endDate];
-    console.log();
 })
 
 

@@ -32,8 +32,7 @@
 
       <div style="font-weight: bolder; color: orange;" class="col-md-2 m-3 mb-3">
         <label for="phoneNumberInput" class="form-label">Telefonszám</label>
-        <input type="tel" minlength="8" maxlength="12" id="phoneNumberInput" name="phone" class="form-control" v-model="form.telefonszam" required 
-        pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+        <input type="tel" minlength="8" maxlength="12" id="phoneNumberInput" name="phone" class="form-control" v-model="form.telefonszam" required>
       </div>
 
       <div style="color: orange;" class="col-md-2 m-3 mb-3">
@@ -43,7 +42,7 @@
     </div>
 
     <div class="mb-2 d-flex justify-content-center" style="margin-top: 1rem;">
-      <input type="submit" class="btn btn-outline-secondary" value="Regisztráció">
+      <input type="submit" class="btn btn-outline-danger" value="Regisztráció">
     </div>
 
 <div class="hiba" >
@@ -125,8 +124,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-input[type=tel]{
-    -moz-appearance: textfield;
+input{
+    border: 1px solid orange;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
     <form style="text-align: center; margin-top: 3rem;" @submit.prevent="SubmitEvent" class="mb-5 mt-5">
         <div>
+            <div class="mb-5" style="font-weight: bolder; font-size: 1.5rem; color: orange;">Bejelentkezés</div>
             <div>
                 <label for="emailInput" class="form-label" style="color: orange;">Email cím</label>
                 <input type="email" class="form-control w-50 m-auto" id="emailInput" v-model="form.email">
@@ -19,12 +20,12 @@
   <p class="m-0 p-1">{{ error.$message }}</p>
 </div>
 </div>  
-        <div class="mb-3 d-flex justify-content-center" style="font-weight: 500; font-size: 0.8rem;">
+        <div class="mb-1 d-flex justify-content-center" style="font-weight: 500; font-size: 0.8rem;">
             Nincs még nálunk felhasználód?
-            <div style="margin-left: 0.3rem;">
+        </div>
+        <div class="mb-5" style="margin-left: 0.3rem;">
                 <router-link to="/registration" style="color: orange; text-decoration: none;">Kattints ide</router-link>
             </div>
-        </div>
     </form>
 </template>
 
@@ -90,5 +91,8 @@ const SubmitEvent = async() => {
   padding: 10px;
   border-radius: 10px;
   
+}
+input{
+    border: 1px solid orange;
 }
 </style>
