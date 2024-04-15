@@ -1,9 +1,16 @@
 <template>
-    <VueDatePicker v-model="date" range/>
-    <div class="card">
-        <img class="w-50 h-50" :src="car.kep_Url" alt="">
+    <VueDatePicker class="d-block p-2" v-model="date" range></VueDatePicker>
+    <div class="d-flex justify-content-evenly m-2">
+        <img class="w-25 h-auto rounded" :src="car.kep_Url">
+         <div class="d-flex justify-content-center card m-2" style="width: 20rem; height:fit-content; border: 0rem">
+        <p><b>A jármű lóereje: </b>{{ car.marka_modelnev }}</p>
+        <p><b>A jármű lóereje: </b>{{ car.loero }}</p>
+        <p><b>Férőhelyek száma: </b>{{ car.ferohely}}</p>
+        </div>
     </div>
-    <button @click="foglalas()">FOGLALÁS</button>
+    <div class="d-flex justify-content-center mb-3">
+        <button @click="foglalas()" class=" w-25 btn btn-warning">FOGLALÁS</button>
+    </div>
 </template>
 
 <script setup>
