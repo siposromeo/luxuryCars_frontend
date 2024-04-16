@@ -35,7 +35,7 @@ const auto = ref({
     ferohely:'',
     loero:'',
     kep_Url:'',
-    video_Url:''
+    leiras:''
   })
 
   const SubmitEvent = async()=>{
