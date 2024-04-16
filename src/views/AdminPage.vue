@@ -42,7 +42,7 @@ const auto = ref({
     const result = await auto.value;
     if (result) {
       await axios.post('https://bgs.jedlik.eu/luxurycars/luxurycars/api/cars', auto.value)
-    console.log("ok");
+    // console.log("ok");
     await alert("Sikeres feltöltés!");
     }
     else{
