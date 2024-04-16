@@ -19,8 +19,8 @@
       <input type="text" class="rounded form-control" v-model="auto.kep_Url"/>
     </div>
     <div class="mt-2">
-      <label class="form-label">Videó</label>
-      <input type="text" class="rounded form-control" v-model="auto.video_Url"/>
+      <label class="form-label">Leirás</label>
+      <input type="text" class="rounded form-control" v-model="auto.leiras"/>
     </div>
     <button class="w-25 align-content-end btn btn-danger mt-3" type="submit">Feltöltés</button>
 </form>
