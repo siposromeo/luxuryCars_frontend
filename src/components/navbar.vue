@@ -18,10 +18,10 @@
           <RouterLink class="a" to="/contact">Team</RouterLink>
         </li>
         <li v-if="!userstore.isLoggedIn">
-          <RouterLink class="a" to="/login" >Bejelentkezés</RouterLink>
+          <RouterLink class="a" to="/login">Bejelentkezés</RouterLink>
         </li>
         <li v-if="!userstore.isLoggedIn">
-          <RouterLink class="a" to="/registration" >Regisztráció</RouterLink>
+          <RouterLink class="a" to="/registration">Regisztráció</RouterLink>
         </li>
         <li>
           <RouterLink class="a" to="/profile" v-if="userstore.isLoggedIn" collapse>Profil</RouterLink>
@@ -159,9 +159,6 @@ header {
     .menu-icon i {
         font-size: 1.7em;
     }
-    /* .menu input[type="checkbox"]: ~ {
-      max-height: 100vh;
-    } */
 }
 </style>
   

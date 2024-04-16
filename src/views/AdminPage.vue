@@ -1,6 +1,6 @@
 <template>
-<div class="d-flex justify-content-between m-2">
-    <h1 class="m-2" style="user-select: none;">Hozzáadási felület</h1>
+  <h1 class="d-flex justify-content-center m-2" style="user-select: none;">Hozzáadási felület</h1>
+<div class="d-flex justify-content-center m-2">
     <form class="m-2 w-50" @submit.prevent="SubmitEvent">
         <div class="mt-2">
       <label class="form-label">Márka</label>
@@ -22,8 +22,10 @@
       <label class="form-label">Leirás</label>
       <input type="text" class="rounded form-control" v-model="auto.leiras"/>
     </div>
-    <button class="w-25 align-content-end btn btn-danger mt-3" type="submit">Feltöltés</button>
-</form>
+  </form>
+</div>
+<div class="d-flex justify-content-center">
+  <button class="btn btn-danger mt-1 mb-3" type="submit">Feltöltés</button>
 </div>
 </template>
 
