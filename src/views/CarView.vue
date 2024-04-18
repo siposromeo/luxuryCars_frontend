@@ -2,22 +2,24 @@
 
 <div class="d-flex justify-content-center text-danger m-2 mt-3" v-if="!userstore.isLoggedIn">FONTOS! Foglalás előtt regisztrálj vagy jelentkezz be az oldal jobb felső sarkánál található gombokkal!</div>
   <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mt-3">
-    <button class="btn btn-warning float-start" @click="lapozasLe">Előző oldal</button>
+    <button class="btn btn-warning float-start" @click="lapozasLe">Previous</button>
     <div class="text-center" style="font-weight: bolder; font-size: larger;">{{ page }}</div>
-    <button class="btn btn-warning float-end" @click="lapozasFel">Következő oldal</button>
+    <button class="btn btn-warning float-end" @click="lapozasFel">Next</button>
   </div>
-  <div class="row container-fluid justify-content-center justify-content-between align-items-center">
-    <div class="w-100 m-3 row row-cols-2 d-flex"> 
+  <div class="d-flex justify-content-center col-xl-12">
+    <div class="w-100 m-2 row row-cols-2 d-flex"> 
       <div class="d-flex" v-for="car in cars">
         <div class="card mb-2 mt-2 col-xl-12">
           <div class="card-body d-flex flex-column flex-row justify-content-center">
             <img class="w-auto h-75 rounded" :src="car.kep_Url">
-            <h2 class="card-title">{{ car.marka_modelnev }}</h2>
-            <div class="container-fluid justify-content-center justify-content-between align-items-center">
+            <h2 class="card border-0 m-2 card-title text-center">{{ car.marka_modelnev }}</h2>
+            <div class="d-flex justify-content-center">
               <p class="card-text">Lóerő: {{ car.loero }}</p>
+            </div>
+            <div class="d-flex justify-content-center">
               <p class="card-text">Férőhely: {{ car.ferohely }}</p>
             </div>
-            <router-link class="btn btn-outline-primary" v-if="userstore.isLoggedIn" :to='"/calendarrent/" +car.id'>Foglald le most!</router-link>
+            <router-link class="btn btn-outline-dark" style="font-weight: bolder; letter-spacing: 0.3rem;" v-if="userstore.isLoggedIn" :to='"/calendarrent/" +car.id'>Foglald le most!</router-link>
           </div>
         </div>
       </div>
@@ -83,9 +85,12 @@ CarService.getAllCars()
   border-radius: 10px;
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: 0.3s;
+  transition: 0.5s;
   background-color: white;
-  font-size: 1.5rem;
-  font-family: fantasy;
+  font-size: 2rem;
+  font-family: "Jersey 10", sans-serif;
+}
+h2{
+  font-weight: bolder;
 }
 </style>

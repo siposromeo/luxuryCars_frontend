@@ -1,13 +1,13 @@
 <template>
-    <form style="text-align: center; margin-top: 3rem;" @submit.prevent="SubmitEvent" class="mb-5 mt-5">
+    <form style="text-align: center;" @submit.prevent="SubmitEvent" class="mb-5 mt-4">
         <div>
-            <div class="mb-5" style="font-weight: bolder; font-size: 1.5rem; color: orange;">Bejelentkezés</div>
+            <div class="mb-4" style="font-weight: bolder; font-size: 2.1rem; color: orange;">Bejelentkezés</div>
             <div>
                 <label for="emailInput" class="form-label" style="color: orange;">Email cím</label>
                 <input type="email" class="form-control w-50 m-auto" id="emailInput" v-model="form.email">
             </div>
             <div>
-                <label for="inputPassword" class="form-label" style="font-weight: bolder; color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;" required>Jelszó</label>
+                <label for="inputPassword" class="form-label" style="color: orange; margin-bottom: 0.5rem; margin-top: 0.5rem;" required>Jelszó</label>
                 <input type="password" id="inputPassword" class="form-control w-50 m-auto" v-model="form.password">
             </div>
             <div class="mb-3 d-flex justify-content-center">
@@ -20,12 +20,6 @@
   <p class="m-0 p-1">{{ error.$message }}</p>
 </div>
 </div>  
-        <div class="mb-1 d-flex justify-content-center" style="font-weight: 500; font-size: 0.8rem;">
-            Nincs még nálunk felhasználói fiókod?
-        </div>
-        <div class="mb-5" style="margin-left: 0.3rem;">
-                <router-link to="/registration" style="color: orange; text-decoration: none;">Kattints ide</router-link>
-            </div>
     </form>
 </template>
 
@@ -78,13 +72,24 @@ const SubmitEvent = async() => {
 </script>
 
 <style scoped>
+label{
+  font-size: 1.3rem;
+  color: orange;
+  font-weight: 600;
+  font-family: "Jersey 10", sans-serif;
+}
+form{
+    font-family: "Jersey 10", sans-serif;
+}
 .btn {
     color: orange;
-    font-family: fantasy;
+    font-family: "Jersey 10", sans-serif;
+    font-size: larger;
+    font-weight: 500;
 }
 
 .hiba{
-  font-family: fantasy;
+    font-family: "Jersey 10", sans-serif;
   color:brown;
   width: 25%;
   margin: auto;

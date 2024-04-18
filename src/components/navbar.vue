@@ -137,7 +137,7 @@ header {
         text-align: center;
         width: 100%;
         height: 50px;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
     .menu-icon {
         width: 100px;
@@ -150,7 +150,7 @@ header {
     }
     #menuToggle:checked ~ ul {
         max-height: 330px;
-        margin-bottom: auto;
+        margin-bottom: 10px;
         transition: ease-in-out 0.5s;
     }
     .menu-icon i {

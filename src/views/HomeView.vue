@@ -1,32 +1,29 @@
 <template>
     <Carousel :value="cars" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000" :showIndicators="false" :showNavigators="false">
       <template #item="cars">
-        <div class="p-2 m-2 d-lg-flex d-grid align-items-center">
+        <div class="mb-3 mt-3 d-lg-flex d-grid align-items-center">
           <div class="mx-auto ms-auto m-lg-auto">
             <img :src="cars.data.kep_Url" style="max-width: 540px; max-height: 260px;" class="rounded"/>
           </div>
         </div>
       </template>
     </Carousel>
-  <div class="row-cols-3 m-3 card-group d-flex mt-2 rounded">
+
+
+  <div class="row-cols-3 m-1 card-group d-flex rounded text-center">
+      <div class="card bg-warning text-white ">
+        <h1 class="card-title">Több, mint 30 autó áll készen, arra hogy kibéreld! Mire vársz?</h1>
+      </div>
+      <div class="card text-warning">
+        <h1 class="card-title">Azonnali foglalás, szinte másodpercek alatt</h1>
+      </div>
     <div class="card bg-warning text-white">
-      <h1 class="text-center mt-5">30 db</h1>
-      <div class="card-body">
-        <h5 class="card-title text-center">Autó áll készen, arra hogy kibéreld őket!</h5>
-      </div>
-    </div>
-    <div class="card text-warning">
-      <ion-icon class="icon" name="stopwatch-outline"></ion-icon>
-      <div class="card-body">
-        <h5 class="card-title text-center">Azonnali foglalás</h5>
-      </div>
-    </div>
-    <div class="card bg-warning text-white">
-      <h1 class="text-center mt-5">Több, mint 10 éve</h1>
-      <div class="card-body">
-      </div>
+      <h1 class="card-title">Több, mint 10 éve a hiperautókra vágyók szolgálatában. Veletek!</h1>
     </div>
   </div>
+
+
+  
   <div class="row-cols-1 m-2 d-flex rounded">
     <div class="mb-2">
 
@@ -38,8 +35,8 @@
       </div>
       <div class="card">
         <div class="card-body text-center mt-5">
-          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5rem;">Béreld ki akár most álom autódat</h1>
-          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Autóink
+          <h1 class="mt-5 text-center" style=" letter-spacing: 0.4vw;">Béreld ki akár most álom autódat</h1>
+          <RouterLink class="btn btn-warning p-3 m-5" to="/car">Autóink
           </RouterLink>
         </div>
       </div>
@@ -48,8 +45,8 @@
     <div class="card-group">
       <div class="card">
         <div class="card-body text-center mt-5">
-          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5vw;">Nagy választék</h1>
-          <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
+          <h1 class="mt-5 text-center" style="letter-spacing: 0.5vw;">Nagy választék</h1>
+          <RouterLink class="btn btn-warning p-3 m-5" to="/car">Foglald le most</RouterLink>
         </div>
       </div>
       <div class="card">
@@ -98,6 +95,14 @@ const responsiveOptions = ref([
 </script>
 
 <style scoped>
+h1{
+  font-family: "Jersey 10", sans-serif;
+}
+.btn{
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 1000;
+  font-size: larger;
+}
 .icon {
   width: 100%;
   height: 100%;
