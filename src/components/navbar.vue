@@ -74,14 +74,14 @@ li {
 }
 header {
     width: 100%;
-    height: 50px;
+    height: 55px;
     line-height: 52px;
-    font-size: 3vw;
+    font-size: 1rem;
     background-color: #f1c40f;
 }
 .brand {
     width: auto;
-    font-size: 4vw;
+    font-size: 2.7rem;
     margin: auto;
     color: #222;
     height: 100%;
@@ -89,13 +89,13 @@ header {
     margin: 0 0 0 2.5rem;
 }
 .menu {
-    width: 630px;
+    width: 660px;
     height: 100%;
     float: right;
 }
 .menu ul {
     width: 100%;
-    height: 50%;
+    height: 60%;
     padding: 0;
     display: -webkit-box;
     display: -moz-box;
@@ -104,15 +104,10 @@ header {
     display: flex;
 }
 .menu ul a {
-    width: auto;
+    width: 100%;
     color: black;
     display: inherit;
     font-size: 30px;
-}
-.menu ul a:hover {
-    background-color: #222;
-    color: #f1c40f;
-    line-height: 50px;
 }
 #menuToggle {
     display: none;

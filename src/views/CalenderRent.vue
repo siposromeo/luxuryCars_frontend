@@ -1,22 +1,20 @@
 <template>
-    <VueDatePicker class="d-block p-2 mx-auto w-50" v-model="date" range></VueDatePicker>
-    <body>
-        <div class="" style="user-select: none;">
+    <VueDatePicker class="d-block p-3 mx-auto w-50" v-model="date" range></VueDatePicker>
+    <body class="mt-1 mb-3">
+        <div style="user-select: none;">
             <div class="row m-2 justify-content-evenly ">
-                
-                    <img class="w-50 col-1" :src="car.kep_Url">
-               
-                <div class="d-flex justify-content-center card m-2 col-1" style="width: 20rem; height:fit-content; border: 0rem">
+                    <img class="w-50 col-1 rounded-5" :src="car.kep_Url">
+                <div class="d-flex justify-content-center card m-2 m-3 col-1" style="width: 25rem; height:fit-content; border: 0.1rem solid; background-color: #f8f9fa; font-size: 1.1rem;">
                     <p><b>A jármű lóereje: </b>{{ car.marka_modelnev }}</p>
                     <p><b>A jármű lóereje: </b>{{ car.loero }}</p>
                     <p><b>Férőhelyek száma: </b>{{ car.ferohely }}</p>
                     <p><b>Rövid információ: </b>{{ car.leiras }}</p>
+                    <div class="d-flex justify-content-center mb-3 mt-3">
+                        <button @click="foglalas()" class=" w-50 btn btn-danger">FOGLALÁS</button>
+                    </div>
                 </div>
             </div>
-</div>
-    <div class="d-flex justify-content-center mb-3">
-        <button @click="foglalas()" class=" w-25 btn btn-warning">FOGLALÁS</button>
-    </div>
+        </div>
     </body>
 </template>
 
@@ -62,5 +60,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
+body{
+    font-family: "Jersey 10", sans-serif;
+}
 </style>
