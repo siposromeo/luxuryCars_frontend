@@ -2,32 +2,32 @@
   <body>
     <header>
       <figure class="brand">
-        <RouterLink class="a" to="/">LuxuryCars</RouterLink>
+        <RouterLink to="/">LuxuryCars</RouterLink>
       </figure>
       <nav class="menu">
-        <input type="checkbox" id="menuToggle">
+        <input type="checkbox" id="menuToggle" v-model="checked"/>
         <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
-        <ul >
+        <ul>
           <li v-if="userstore.isLoggedIn && userData.user.role == 1">
-            <RouterLink class="a" to="/admin">Admin</RouterLink>
+            <RouterLink @click="checked=false" class="a" to="/admin">Admin</RouterLink>
           </li>
           <li>
-          <RouterLink class="a" to="/car">Autóink</RouterLink>
+          <RouterLink @click="checked=false" class="a" to="/car">Autóink</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/contact">Team</RouterLink>
+          <RouterLink @click="checked=false" class="a" to="/contact">Team</RouterLink>
         </li>
         <li v-if="!userstore.isLoggedIn">
-          <RouterLink class="a" to="/login">Bejelentkezés</RouterLink>
+          <RouterLink @click="checked=false" class="a" to="/login">Bejelentkezés</RouterLink>
         </li>
         <li v-if="!userstore.isLoggedIn">
-          <RouterLink class="a" to="/registration">Regisztráció</RouterLink>
+          <RouterLink @click="checked=false" class="a" to="/registration">Regisztráció</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/profile" v-if="userstore.isLoggedIn" collapse>Profil</RouterLink>
+          <RouterLink @click="checked=false" class="a" to="/profile" v-if="userstore.isLoggedIn" collapse>Profil</RouterLink>
         </li>
         <li>
-          <RouterLink class="a" to="/" @click="logout()" v-if="userstore.isLoggedIn"  >Kijelentkezés</RouterLink>
+          <RouterLink  class="a" to="/" @click="logout()" v-if="userstore.isLoggedIn">Kijelentkezés</RouterLink>
         </li>
         </ul>
       </nav>
@@ -40,28 +40,33 @@
 import { RouterView, RouterLink } from 'vue-router'
 import { useUserStorage } from '@/stores/userstore';
 import Axios from 'axios';
+import {ref} from 'vue'
 const userstore = useUserStorage();
 const userData = userstore
+const checked = ref(false)
 async function logout() {
   const req = await Axios.post('/logout','' ,{headers:{'Authorization': `Bearer ${userstore.token}`}});
   // console.log(req);
   userstore.setUser(null)
   userstore.setLoggedIn(false)
   userstore.setToken('')
+  checked.value = false
   }
 </script>
   
 <style scoped>
-html, body {
+html, body{
     width: 100%;
     height: 100%;
     padding: 0;
     text-transform: uppercase;
     text-shadow: 1.2px 1px 10px #000;
+    font-family: "Jersey 10", sans-serif;
 }
 a {
   color: #222;
   text-decoration: none;
+  justify-content: space-between;
 }
 li {
     list-style: none;
@@ -69,27 +74,24 @@ li {
 }
 header {
     width: 100%;
-    height: 54px;
-    line-height: 50px;
-    font-family: fantasy;
+    height: 50px;
+    line-height: 52px;
+    font-size: 3vw;
     background-color: #f1c40f;
 }
 .brand {
     width: auto;
-    font-family: fantasy;
-    font-size: 1.6rem;
+    font-size: 4vw;
     margin: auto;
     color: #222;
     height: 100%;
     float: left;
-    margin: 0 0 0 3rem;
-    letter-spacing: 0.5cap;
+    margin: 0 0 0 2.5rem;
 }
 .menu {
     width: 630px;
     height: 100%;
     float: right;
-    letter-spacing: 0.2cap;
 }
 .menu ul {
     width: 100%;
@@ -103,14 +105,14 @@ header {
 }
 .menu ul a {
     width: auto;
-    color: #222;
+    color: black;
     display: inherit;
-    padding: 3px 2px;
+    font-size: 30px;
 }
 .menu ul a:hover {
     background-color: #222;
     color: #f1c40f;
-    line-height: 48px;
+    line-height: 50px;
 }
 #menuToggle {
     display: none;

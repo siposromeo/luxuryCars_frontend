@@ -1,8 +1,9 @@
 <template>
-  <h1 class="d-flex justify-content-center m-2" style="user-select: none;">Hozzáadási felület</h1>
-<div class="d-flex justify-content-center m-2">
+  <h1 class="d-flex justify-content-center m-2 mt-3" style="user-select: none;">Hozzáadási felület</h1>
+  <body>
+    <div class="d-flex justify-content-center m-2" style="user-select: none;">
     <form class="m-2 w-50" @submit.prevent="SubmitEvent">
-        <div class="mt-2">
+        <div class="mt-1">
       <label class="form-label">Márka</label>
       <input type="text" class="rounded form-control" v-model="auto.marka_modelnev"/>
     </div>
@@ -19,11 +20,12 @@
       <input type="text" class="rounded form-control" v-model="auto.kep_Url"/>
     </div>
     <div class="mt-2">
-      <label class="form-label">Leirás</label>
+      <label class="form-label">Leírás</label>
       <input type="text" class="rounded form-control" v-model="auto.leiras"/>
     </div>
   </form>
 </div>
+  </body>
 <div class="d-flex justify-content-center">
   <button class="btn btn-danger mt-1 mb-3" type="submit">Feltöltés</button>
 </div>
@@ -55,6 +57,11 @@ const auto = ref({
 
 
 <style scoped>
+body{
+  font-family: "Jersey 10", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1cap;
+}
 input{
     border: 1px solid red;
 }

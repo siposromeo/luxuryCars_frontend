@@ -48,7 +48,7 @@
     <div class="card-group">
       <div class="card">
         <div class="card-body text-center mt-5">
-          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5rem;">Nagy választék</h1>
+          <h1 class="mt-5 text-center" style="font-family: fantasy; letter-spacing: 0.5vw;">Nagy választék</h1>
           <RouterLink class="btn btn-warning p-4 m-5" style="font-family: fantasy;" to="/car">Foglald le most</RouterLink>
         </div>
       </div>
@@ -106,9 +106,5 @@ const responsiveOptions = ref([
 
 .card {
   border: none;
-}
-
-.p-carousel-indicator{
- text-decoration: none !important;
 }
 </style>

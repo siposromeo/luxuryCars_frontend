@@ -1,7 +1,7 @@
 <template>
 
 <div class="d-flex justify-content-center text-danger m-2" v-if="!userstore.isLoggedIn">FONTOS! Foglalás előtt regisztrálj vagy jelentkezz be az oldal jobb felső sarkánál található gombokkal!</div>
-  <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mt-3">
+  <div class="d-flex row-cols-3 d-flex container-fluid justify-content-center align-items-center mt-1">
     <button class="btn btn-warning float-start" @click="lapozasLe">Előző oldal</button>
     <div class="text-center" style="font-weight: bolder; font-size: larger;">{{ page }}</div>
     <button class="btn btn-warning float-end" @click="lapozasFel">Következő oldal</button>

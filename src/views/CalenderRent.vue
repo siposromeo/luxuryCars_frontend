@@ -1,17 +1,23 @@
 <template>
-    <VueDatePicker class="d-block p-2" v-model="date" range></VueDatePicker>
-    <div class="d-flex justify-content-evenly m-2">
-        <img class="w-50 h-50 rounded" :src="car.kep_Url">
-         <div class="d-flex justify-content-center card m-2" style="width: 20rem; height:fit-content; border: 0rem">
-        <p><b>A jármű lóereje: </b>{{ car.marka_modelnev }}</p>
-        <p><b>A jármű lóereje: </b>{{ car.loero }}</p>
-        <p><b>Férőhelyek száma: </b>{{ car.ferohely }}</p>
-        <p><b>Rövid információ: </b>{{ car.leiras }}</p>
-        </div>
-    </div>
+    <VueDatePicker class="d-block p-2 mx-auto w-50" v-model="date" range></VueDatePicker>
+    <body>
+        <div class="" style="user-select: none;">
+            <div class="row m-2 justify-content-evenly ">
+                
+                    <img class="w-50 col-1" :src="car.kep_Url">
+               
+                <div class="d-flex justify-content-center card m-2 col-1" style="width: 20rem; height:fit-content; border: 0rem">
+                    <p><b>A jármű lóereje: </b>{{ car.marka_modelnev }}</p>
+                    <p><b>A jármű lóereje: </b>{{ car.loero }}</p>
+                    <p><b>Férőhelyek száma: </b>{{ car.ferohely }}</p>
+                    <p><b>Rövid információ: </b>{{ car.leiras }}</p>
+                </div>
+            </div>
+</div>
     <div class="d-flex justify-content-center mb-3">
         <button @click="foglalas()" class=" w-25 btn btn-warning">FOGLALÁS</button>
     </div>
+    </body>
 </template>
 
 <script setup>
