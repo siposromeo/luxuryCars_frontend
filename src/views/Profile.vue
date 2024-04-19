@@ -19,15 +19,15 @@
     </div>
   </div>
   <h1 class="d-flex justify-content-center mt-3" style="user-select: none;">Foglalások</h1>
-  <div class="m-2 mb-1" style="font-size: 0.7rem;">
+  <div class="m-2 mb-1" style="font-size: 1rem;">
     <table class="table">
       <thead>
         <tr class="table-secondary border-2 border-dark text-center" style="font-weight: bolder; user-select: none;" >
           <th scope="col">ÁR</th>
           <th scope="col">GÉPJÁRMŰ</th>
           <th scope="col">MEGRENDELÉS</th>
-          <th scope="col">BÉRELVE -TÓL</th>
-          <th scope="col">BÉRELVE -IG</th>
+          <th scope="col">BÉRELVE-TÓL</th>
+          <th scope="col">BÉRELVE-IG</th>
         </tr>
       </thead> 
       <tbody class="table table-striped border-3 text-center" style="user-select: none;">
