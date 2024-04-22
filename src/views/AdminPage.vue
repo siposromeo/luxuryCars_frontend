@@ -1,8 +1,8 @@
 <template>
-  <h1 class="d-flex justify-content-center m-2 mt-3" style="user-select: none;">Hozzáadási felület</h1>
+  <h1 class="d-flex justify-content-center m-2 mt-3" style="user-select: none;">Admin felület</h1>
   <body>
     <div class="d-flex justify-content-center m-2" style="user-select: none;">
-    <form class="m-2 w-50" @submit.prevent="SubmitEvent">
+    <form class="m-2 w-50" @submit.prevent="SubmitEvent()">
         <div class="mt-1">
       <label class="form-label">Márka</label>
       <input type="text" class="rounded form-control" v-model="auto.marka_modelnev"/>
@@ -23,17 +23,37 @@
       <label class="form-label">Leírás</label>
       <input type="text" class="rounded form-control" v-model="auto.leiras"/>
     </div>
+    <div class="d-flex justify-content-center mt-3">
+      <input type="submit" class="btn btn-outline-warning mt-2 mb-3" value="Feltöltés">
+    </div>
   </form>
 </div>
-  </body>
-<div class="d-flex justify-content-center">
-  <button class="btn btn-danger mt-1 mb-3" type="submit">Feltöltés</button>
-</div>
+</body>
+<table class="table table-responsive table-bordered table-hover container">
+  <thead>
+    <tr class="text-center">
+      <th scope="col">Modell</th>
+      <th scope="col">Lóerő</th>
+      <th scope="col">Leírás</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="item in cars" class="text-center">
+      <th scope="row">{{ item.marka_modelnev }}</th>
+      <td>{{ item.loero}}</td>
+      <td>{{ item.leiras }}</td>
+    </tr>
+  </tbody>
+</table>
+
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
+import CarService from '../services/carservice'
+
+const cars = ref();
 const auto = ref({
     marka_modelnev:'',
     ferohely:'',
@@ -42,17 +62,25 @@ const auto = ref({
     leiras:''
   })
 
-  const SubmitEvent = async()=>{
-    const result = await auto.value;
+  const SubmitEvent = async () =>{
+    const result = await  auto.value;
     if (result) {
       await axios.post('https://bgs.jedlik.eu/luxurycars/luxurycars/api/cars', auto.value)
-    // console.log("ok");
+    // console.log(auto.value);
+    location.reload()
     await alert("Sikeres feltöltés!");
     }
     else{
       alert("Sikertelen feltöltés...")
     }
   }
+
+  CarService.getAllOfTheCars()
+  .then(res => {
+    cars.value = res
+    console.log(res.data)
+})
+
 </script>
 
 
@@ -63,6 +91,6 @@ body{
   letter-spacing: 1cap;
 }
 input{
-    border: 1px solid red;
+    border: 1px solid orange;
 }
 </style>

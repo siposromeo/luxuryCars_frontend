@@ -7,9 +7,9 @@
     <button class="btn btn-warning float-end" @click="lapozasFel">Next</button>
   </div>
   <div class="d-flex justify-content-center col-xl-12">
-    <div class="w-100 m-2 row row-cols-2 d-flex"> 
+    <div class="w-100 m-2 row row-cols-lg-2 d-flex"> 
       <div class="d-flex" v-for="car in cars">
-        <div class="card mb-2 mt-2 col-xl-12">
+        <div class="card mb-2 mt-2">
           <div class="card-body d-flex flex-column flex-row justify-content-center">
             <img class="w-auto h-75 rounded" :src="car.kep_Url">
             <h2 class="card border-0 m-2 card-title text-center">{{ car.marka_modelnev }}</h2>

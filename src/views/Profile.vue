@@ -75,7 +75,7 @@ async function setdata() {
 div{ 
   font-family: "Jersey 10", sans-serif;
   font-size: 1.5rem;
-  font-weight: 1000;
+  font-weight: 400;
 }
 h1{
   font-family: "Jersey 10", sans-serif;

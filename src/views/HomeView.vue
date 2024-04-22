@@ -8,8 +8,6 @@
         </div>
       </template>
     </Carousel>
-
-
   <div class="row-cols-3 m-1 card-group d-flex rounded text-center">
       <div class="card bg-warning text-white ">
         <h1 class="card-title">Több, mint 30 autó áll készen, arra hogy kibéreld! Mire vársz?</h1>
@@ -21,9 +19,6 @@
       <h1 class="card-title">Több, mint 10 éve a hiperautókra vágyók szolgálatában. Veletek!</h1>
     </div>
   </div>
-
-
-  
   <div class="row-cols-1 m-2 d-flex rounded">
     <div class="mb-2">
 
@@ -34,10 +29,9 @@
           class="w-auto h-auto rounded">
       </div>
       <div class="card">
-        <div class="card-body text-center mt-5">
-          <h1 class="mt-5 text-center" style=" letter-spacing: 0.4vw;">Béreld ki akár most álom autódat</h1>
-          <RouterLink class="btn btn-warning p-3 m-5" to="/car">Autóink
-          </RouterLink>
+        <div class="card-body text-center mt-5" style=" letter-spacing: 0.5vw;">
+          <h1 class="mt-5 text-center">Béreld ki akár most álom autódat</h1>
+          <RouterLink class="btn btn-warning p-3 m-5" to="/car">Autóink</RouterLink>
         </div>
       </div>
     </div>
@@ -45,12 +39,12 @@
     <div class="card-group">
       <div class="card">
         <div class="card-body text-center mt-5">
-          <h1 class="mt-5 text-center" style="letter-spacing: 0.5vw;">Nagy választék</h1>
+          <h1 class="mt-5 text-center" style="letter-spacing: 0.5vw;">Hatalmas választék</h1>
           <RouterLink class="btn btn-warning p-3 m-5" to="/car">Foglald le most</RouterLink>
         </div>
       </div>
       <div class="card">
-        <img src="https://s1.cdn.autoevolution.com/images/gallery/audi-r8-v10-performance-rwd-spyder-2021-7219_19.jpg" class="w-auto h-auto rounded">
+        <img src="https://ev-database.org/img/auto/Tesla_Model_S_2021/Tesla_Model_S_2021-01@2x.jpg" class="w-auto h-100 rounded">
       </div>
     </div>
   </div>
@@ -64,10 +58,10 @@ import CarService from '../services/carservice'
 
 const cars = ref();
 
-CarService.getAllCars()
+CarService.getAllOfTheCars()
   .then(res => {
-    cars.value = res.data
-    // console.log(res.data)
+    cars.value = res
+    console.log(res.data)
   })
 
 const responsiveOptions = ref([

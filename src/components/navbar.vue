@@ -62,6 +62,7 @@ html, body{
     text-transform: uppercase;
     text-shadow: 1.2px 1px 10px #000;
     font-family: "Jersey 10", sans-serif;
+    user-select: none;
 }
 a {
   color: #222;

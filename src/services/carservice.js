@@ -11,6 +11,15 @@ export default {
             return Promise.reject(err.response);
         })
     },
+    getAllOfTheCars(){
+        return Axios.get('/carsAll')
+        .then(resp => {
+            return resp.data;
+        })
+        .catch(err => {
+            return Promise.reject(err.response);
+        })
+    },
     getCarById(id) {
         return Axios.get(`/cars/${id}`)
         .then(resp => {
